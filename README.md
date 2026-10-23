@@ -1,24 +1,69 @@
-# AiLive — The Galaxy Has Something to Say
+<div align="center">
 
-**X4: Foundations gives you an empire. AiLive gives you people to answer to.**
+# AiLive
+### THE GALAXY HAS SOMETHING TO SAY.
 
-Your captain has orders. Your rivals have reasons. The station you just saved has a story. And the officer you keep sending into impossible situations might have something to say about your leadership.
+**Your fleet has orders. Your officers have memories. Your rivals have reasons.**
 
-AiLive brings AI-driven conversation, memory, command and faction politics into X4's living universe through **Player2**. Talk to the people behind the ships. Give an officer a mission in your own words. Negotiate over a warship. Follow the intelligence, losses and decisions shaping the galaxy around you.
+**[🚀 Download RC1](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1)** · **[📦 Get the mod](https://github.com/KennyG1990/AiLive/releases/download/v2.1.0-rc.1/x4_ai_influence.rar)** · **[🐛 Report a bug](https://github.com/KennyG1990/AiLive/issues)**
+
+*An AI conversation, command and faction-politics mod for X4: Foundations, powered by Player2.*
+
+</div>
+
+---
+
+## Your empire called. Pick up.
+
+You bought the ship. Hired the captain. Built the fleet.
+
+Now open the comm-link.
+
+Give an officer a mission in your own words. Ask about the war unfolding outside the window. Negotiate over a warship. Follow a trail of intelligence. Get to know the people you keep sending into the dangerous bits of space.
+
+**X4 gives you an empire. AiLive gives you people to answer to.**
+
+The dream is a galaxy where command has a human side—even when the person on the other end of the comm-link is very much not human. A place where conversations carry history, rank carries responsibility, and the next encounter can become part of your campaign's story.
 
 **Build the fleet. Know the people. Live with the consequences.**
 
-This is **AiLive 2.1.0 RC1**, a public **release candidate** for players who want to help put that vision through its paces. Core systems are implemented; several newer systems have working, observed portions with further validation and development still underway. The feature sections below make that distinction explicit.
+> **Boarding notice:** This is **2.1.0 RC1**, an experimental Windows release candidate. Core systems are implemented; newer systems have partial coverage and ongoing validation. The exact download has not had a fresh end-to-end gameplay qualification during publication. Bring a separate test save. The paint is still drying.
 
-## Download
+## 📡 What's on the other end of the comm-link?
 
-**[Download AiLive 2.1.0 RC1](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1)** · **[Get the mod archive](https://github.com/KennyG1990/AiLive/releases/download/v2.1.0-rc.1/x4_ai_influence.rar)** · **[Report an issue](https://github.com/KennyG1990/AiLive/issues)**
+| Talk to your universe | Command your people | Follow the consequences |
+| :--- | :--- | :--- |
+| Natural-language NPC conversations with personality, mood, trust and remembered context. | Natural-language captain orders, seven naval ranks and a working chain of command. | Espionage, galactic news and an influence engine connecting decisions to bounded game actions. |
+| Remote contact with suitable ship and station NPCs. | Mandates, officer delegation and situation reports travelling back up the chain. | A record of losses, sector captures and diplomatic events that can feed future conversations. |
 
-Download **`x4_ai_influence.rar`** from the RC1 release assets. This is the supplied mod archive, published without repacking or changing its contents.
+### “Captain, here's the plan.”
 
-**Do not download GitHub's automatically generated “Source code” ZIP or TAR.GZ.** Those contain this public repository's documentation, not the playable mod.
+Put the mission into words. AiLive's command system has recorded live results for patrol, follow, escort, movement and resupply—including an energy-cell purchase followed through to delivered cargo.
 
-## Implemented features — the people inside your empire
+There is something deeply satisfying about a captain doing the job you actually asked for. There is also something very useful about hearing what the game refused. AiLive reports accepted, refused and completed orders; exact command coverage is still expanding.
+
+### Lieutenant today. Admiral is your call.
+
+Seven ranks, persistent authority, enforced command limits. Promote your officers, assign responsibilities and delegate down the chain. Watch the friendly battle tracker bring ranks, reporting relationships and order flow together.
+
+You are building a navy. Give it a chain of command.
+
+### Loose lips. Expensive ships.
+
+Player-to-faction and faction-to-player espionage are implemented, and the newer faction-to-faction network has recorded live placement, recall and exposure consequences. Who knows a fact—and whether they can share it—matters.
+
+Warship sales are also taking shape, with recorded ownership and payment checks in player-to-faction and faction-to-faction transactions. The broader negotiation experience is still developing; commissioning new ships is parked.
+
+### The news is about the galaxy you're playing in.
+
+Capital losses. Sector captures. Diplomatic declarations. Events feed the logbook and conversational context, giving the next exchange something more interesting to draw on than small talk.
+
+The ambition: that familiar corner of space starts feeling like somewhere with a history.
+
+<details>
+<summary><strong>📖 Open the field manual: implemented features and evidence</strong></summary>
+
+### The complete feature briefing
 
 ### Conversations with a past
 
@@ -58,7 +103,13 @@ The result is a foundation for a campaign whose history can matter after the not
 
 The mod connects to **Player2 running on your PC** through its bundled HTTP transport. The default Player2 setup needs **no separate Python bridge and no user-supplied API key**. Keep Player2 running and signed in while you play.
 
-## Already taking shape — implemented portions, work still underway
+
+</details>
+
+<details>
+<summary><strong>🔧 Look inside the shipyard: councils, doctrine, distress calls and other developing systems</strong></summary>
+
+### Under construction — what works and what is still open
 
 These systems have recorded live results or substantial implementation, but their full feature scope is **not yet complete**:
 
@@ -75,7 +126,10 @@ These systems have recorded live results or substantial implementation, but thei
 
 **These are the systems to explore with an RC mindset: working foundations, meaningful progress, and rough edges worth reporting.**
 
-## Upcoming features — where the galaxy goes next
+
+</details>
+
+## 🔭 The horizon: where we want to take this
 
 The Notion feature tracker separates specified plans from partial implementations and exploratory ideas. These are **roadmap items, not a promise that every feature is finished in RC1**, and no delivery dates are implied.
 
@@ -111,7 +165,7 @@ Species-oriented text-to-speech remains planned. Context retrieval and prompt ar
 
 Commander intelligence requests that create customers for espionage; factions remembering completed service when deciding how to treat you next; doctrine-aware refusals; and clearer map-level fronts. These are tracked opportunities, not scheduled promises.
 
-## Install RC1
+## 🚀 Get aboard in five steps
 
 1. Install and launch **[Player2](https://player2.game)**, then sign in. Keep it running during play.
 2. Download **`x4_ai_influence.rar`** from the [RC1 release assets](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1) and extract it with a RAR-capable archive tool.
@@ -143,7 +197,10 @@ Player2's available models, connectivity and AI allowance affect responses. A lo
 - Use the installation instructions in **this README or the linked RC1 release page**. The archive's older README contains development-repository links, a ZIP filename and roadmap references that do not match this public RAR release.
 - Report problems through **[AiLive Issues](https://github.com/KennyG1990/AiLive/issues)**. Include your X4 version, RC version, other installed mods, reproduction steps, and relevant redacted log lines or screenshots. Say what the character promised and what the game actually did.
 
-## Package verification
+<details>
+<summary><strong>🧾 Inspect the cargo manifest: archive checks and SHA-256</strong></summary>
+
+### RC1 package verification
 
 | Item | Result |
 | --- | --- |
@@ -163,14 +220,16 @@ SHA-256:
 4b2d26925dbc49bd82796754e7fb2f042147c050812873c200d19515d6d2502a
 ```
 
+</details>
+
 ---
 
-**Your next order could become an officer's mission. Your next deal could change who owns a warship. Your next conversation could give a familiar corner of the galaxy a face you remember.**
+## The next story starts on your comm-link.
+
+An officer with a mission. A deal worth making. A conversation you weren't expecting.
 
 **Welcome aboard AiLive.**
 
+**[Download RC1](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1)** · **[Report an issue](https://github.com/KennyG1990/AiLive/issues)**
 
-
-## About this repository
-
-This is AiLive's public release home: mod information, packaged downloads and issue reports. Development source and history are maintained separately.
+<sub>This is AiLive's public release home. Development source and history are maintained separately. AiLive is a community mod for X4: Foundations.</sub>
