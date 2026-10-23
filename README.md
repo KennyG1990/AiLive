@@ -167,6 +167,8 @@ Commander intelligence requests that create customers for espionage; factions re
 
 ## 🚀 Get aboard in five steps
 
+**Grab `x4_ai_influence.rar` from the release assets.** GitHub's automatic **Source code** ZIP/TAR.GZ downloads contain this public repository's documentation, not the playable mod.
+
 1. Install and launch **[Player2](https://player2.game)**, then sign in. Keep it running during play.
 2. Download **`x4_ai_influence.rar`** from the [RC1 release assets](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1) and extract it with a RAR-capable archive tool.
 3. Place the included **`x4_ai_influence`** folder inside your **`X4 Foundations/extensions/`** directory. The final layout must include:
