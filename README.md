@@ -5,7 +5,7 @@
 
 **Your fleet has orders. Your officers have memories. Your rivals have reasons.**
 
-**[🚀 Download RC1](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1)** · **[📦 Get the mod](https://github.com/KennyG1990/AiLive/releases/download/v2.1.0-rc.1/x4_ai_influence.rar)** · **[🐛 Report a bug](https://github.com/KennyG1990/AiLive/issues)**
+**[🚀 Download RC1](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1)** · **[📦 Get the mod](https://github.com/KennyG1990/AiLive/releases/download/v2.1.0-rc.1/x4_ai_influence.rar)** · **[💬 Join the Discord](https://discord.gg/5zwxzRvDY)** · **[🐛 Report a bug](https://github.com/KennyG1990/AiLive/issues)**
 
 *An AI conversation, command and faction-politics mod for X4: Foundations, powered by Player2.*
 
@@ -226,12 +226,20 @@ SHA-256:
 
 ---
 
+## 💬 The off-duty comm channel
+
+Your captain did something brilliant? Your negotiation went spectacularly sideways? Bring the story.
+
+**[Join the community on Discord](https://discord.gg/5zwxzRvDY)** to talk AiLive, share campaign moments, compare notes and discuss what you want to see next. Screenshots, fleet tales and gloriously ambitious ideas welcome.
+
+Found a reproducible bug? Drop it in **[GitHub Issues](https://github.com/KennyG1990/AiLive/issues)** so it has a place to be tracked.
+
 ## The next story starts on your comm-link.
 
 An officer with a mission. A deal worth making. A conversation you weren't expecting.
 
 **Welcome aboard AiLive.**
 
-**[Download RC1](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1)** · **[Report an issue](https://github.com/KennyG1990/AiLive/issues)**
+**[Download RC1](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1)** · **[Join the Discord](https://discord.gg/5zwxzRvDY)** · **[Report an issue](https://github.com/KennyG1990/AiLive/issues)**
 
 <sub>This is AiLive's public release home. Development source and history are maintained separately. AiLive is a community mod for X4: Foundations.</sub>
