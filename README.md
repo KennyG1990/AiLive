@@ -5,7 +5,7 @@
 
 **Your fleet has orders. Your officers have memories. Your rivals have reasons.**
 
-**[🚀 Download RC1](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1)** · **[📦 Get the mod](https://github.com/KennyG1990/AiLive/releases/download/v2.1.0-rc.1/x4_ai_influence.rar)** · **[💬 Join the Discord](https://discord.gg/5zwxzRvDY)** · **[🐛 Report a bug](https://github.com/KennyG1990/AiLive/issues)**
+**[🚀 download the latest release here](https://github.com/KennyG1990/AiLive/releases)** · **[📦 Release candidates](https://github.com/KennyG1990/AiLive/releases)** · **[💬 Join the Discord](https://discord.gg/5zwxzRvDY)** · **[🐛 Report a bug](https://github.com/KennyG1990/AiLive/issues)**
 
 *An AI conversation, command and faction-politics mod for X4: Foundations, powered by Player2.*
 
@@ -27,7 +27,35 @@ The dream is a galaxy where command has a human side—even when the person on t
 
 **Build the fleet. Know the people. Live with the consequences.**
 
-> **Boarding notice:** This is **2.1.0 RC1**, an experimental Windows release candidate. Core systems are implemented; newer systems have partial coverage and ongoing validation. The exact download has not had a fresh end-to-end gameplay qualification during publication. Bring a separate test save. The paint is still drying.
+> **Boarding notice:** AiLive is an experimental Windows mod available as release candidates. Core systems are implemented; newer systems have partial coverage and ongoing validation. See each release's notes for its included changes and validation details. Bring a separate test save. The paint is still drying.
+
+## Peace has to make it through the gates.
+
+A council decides it wants peace. A fighter leaves with the proposal. Two gates stand between that decision and the people who need to hear it.
+
+**This happened in a live X4 campaign:** the Antigone council sought peace with the Holy Order. An Antigone fighter flew two gates to deliver the proposal. Only after it arrived did the Holy Order council weigh it.
+
+Now put a spy in the path of a courier.
+
+In another live encounter, a Buccaneers spy intercepted one of the player's couriers and leaked his orders through the existing espionage system. It happened without the player prompting the interception.
+
+**The connection is the gameplay: councils make decisions, ships carry the messages, delivery determines when they can be considered, and espionage can expose the orders travelling through that same universe.**
+
+### Your intelligence has a journey.
+
+A scout had a reconnaissance report, but was out of communications range. The report was held. With no free pilots available to carry it, the scout reasoned that it had to deliver the report personally, flew back, and the report arrived.
+
+A courier looking for a missing recipient travels to the last known location and searches. If it cannot get through, it reports what happened. One courier, pinned down in Argon Prime, reported that it never got out.
+
+Distance matters. A delayed ship means delayed information. Your next briefing has a journey behind it.
+
+### An empty chair still belongs to someone.
+
+Commodore Xiaowen Jackson was missing from her post and from the crews of the player's 42 ships and two stations. CORPS marked her **MISSING** beside her billet and held the position for her. The command structure reflected the person who was actually absent.
+
+*From the developer's live campaign review, shared October 26, 2026. These are demonstrated gameplay examples; future ambitions appear separately in the roadmap.*
+
+**Give an order. Send the messenger. See who learns about it before you do.**
 
 ## 📡 What's on the other end of the comm-link?
 
@@ -115,7 +143,7 @@ These systems have recorded live results or substantial implementation, but thei
 
 | System | What is working / recorded | What remains |
 | --- | --- | --- |
-| **Faction councils and strategic leadership** | Faction leaders reason from military strength, losses, relations and doctrine. Autonomous council activity has been observed. | Further live proof for sector claims, war goals, peace terms and event-driven escalation. |
+| **Faction councils and strategic leadership** | Faction leaders reason from military strength, losses, relations and doctrine. Autonomous council activity has been observed. In a live campaign, an Antigone peace proposal travelled two gates by fighter before the Holy Order council considered it. | Further live proof for sector claims, war goals, negotiated peace outcomes and event-driven escalation. |
 | **Warship negotiations** | Player-to-faction and faction-to-faction ship sales have recorded owner and payment checks. | Commissioning new ships is parked; the broader pricing and negotiation flow continues to evolve. |
 | **Faction purchasing power** | Economic purchasing limits and a mod-side reserve system exist; the tracker records a signed sale debiting a faction reserve. | Deferred initialization and remaining economic edge cases need further validation. |
 | **Doctrine** | Player doctrine reaches officers; faction doctrine informs council reasoning. The field manual and structured operation-order example have live proof. | Broader after-action learning, lesson reassessment and the complete on-screen record. |
@@ -131,7 +159,7 @@ These systems have recorded live results or substantial implementation, but thei
 
 ## 🔭 The horizon: where we want to take this
 
-The Notion feature tracker separates specified plans from partial implementations and exploratory ideas. These are **roadmap items, not a promise that every feature is finished in RC1**, and no delivery dates are implied.
+The Notion feature tracker separates specified plans from partial implementations and exploratory ideas. These are **roadmap items, not a promise that every feature is finished in the current release candidate**, and no delivery dates are implied.
 
 ### Deeper diplomacy
 
@@ -139,7 +167,7 @@ Tribute, reparations, sector-transfer agreements, broader war-fatigue mechanics,
 
 ### More authority to delegate
 
-Expand the working officer-to-officer command system toward governors, sector authority and vassal relationships. Further mandate work includes doctrine inheritance, intelligence leaks, objections and stronger links between an officer's decisions and their outcomes.
+Expand the working officer-to-officer command system toward governors, sector authority and vassal relationships. Further mandate work includes doctrine inheritance, broader intelligence consequences, objections and stronger links between an officer's decisions and their outcomes.
 
 ### A richer negotiation table
 
@@ -167,10 +195,10 @@ Commander intelligence requests that create customers for espionage; factions re
 
 ## 🚀 Get aboard in five steps
 
-**Grab `x4_ai_influence.rar` from the release assets.** GitHub's automatic **Source code** ZIP/TAR.GZ downloads contain this public repository's documentation, not the playable mod.
+**Grab the packaged mod archive from the latest release candidate's assets.** GitHub's automatic **Source code** ZIP/TAR.GZ downloads contain this public repository's documentation, not the playable mod.
 
 1. Install and launch **[Player2](https://player2.game)**, then sign in. Keep it running during play.
-2. Download **`x4_ai_influence.rar`** from the [RC1 release assets](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1) and extract it with a RAR-capable archive tool.
+2. [download the latest release here](https://github.com/KennyG1990/AiLive/releases), choose the packaged mod archive from its assets, and extract it with a compatible archive tool.
 3. Place the included **`x4_ai_influence`** folder inside your **`X4 Foundations/extensions/`** directory. The final layout must include:
 
    ```text
@@ -194,15 +222,15 @@ Player2's available models, connectivity and AI allowance affect responses. A lo
 ## Release-candidate notes
 
 - **Back up your save and use a separate test save for RC testing.** This is an experimental build with systems that can affect orders, ownership, money and relationships.
-- Implemented features and live observations above are grounded in the project's Notion tracker. **This exact uploaded archive has not received a fresh end-to-end gameplay qualification as part of publication.**
+- Feature coverage draws on the project's Notion tracker and developer live campaign reviews. The courier, diplomatic-delivery, interception and missing-officer examples above come from the review shared October 26, 2026. Check each release's notes for which changes it includes and its validation details.
 - Some features have only partial coverage; AI replies, UI layouts, persistence and interactions with other mods can still expose defects.
-- Use the installation instructions in **this README or the linked RC1 release page**. The archive's older README contains development-repository links, a ZIP filename and roadmap references that do not match this public RAR release.
+- Use the installation instructions in **this README and the notes accompanying your downloaded release**.
 - Report problems through **[AiLive Issues](https://github.com/KennyG1990/AiLive/issues)**. Include your X4 version, RC version, other installed mods, reproduction steps, and relevant redacted log lines or screenshots. Say what the character promised and what the game actually did.
 
 <details>
 <summary><strong>🧾 Inspect the cargo manifest: archive checks and SHA-256</strong></summary>
 
-### RC1 package verification
+### Historical package verification — initial release candidate
 
 | Item | Result |
 | --- | --- |
@@ -240,6 +268,6 @@ An officer with a mission. A deal worth making. A conversation you weren't expec
 
 **Welcome aboard AiLive.**
 
-**[Download RC1](https://github.com/KennyG1990/AiLive/releases/tag/v2.1.0-rc.1)** · **[Join the Discord](https://discord.gg/5zwxzRvDY)** · **[Report an issue](https://github.com/KennyG1990/AiLive/issues)**
+**[download the latest release here](https://github.com/KennyG1990/AiLive/releases)** · **[Join the Discord](https://discord.gg/5zwxzRvDY)** · **[Report an issue](https://github.com/KennyG1990/AiLive/issues)**
 
 <sub>This is AiLive's public release home. Development source and history are maintained separately. AiLive is a community mod for X4: Foundations.</sub>
