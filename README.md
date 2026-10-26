@@ -2,10 +2,13 @@
 
 ### ⚡ *THE MACHINES WERE ALWAYS ALIVE. NOW THE PEOPLE ARE TOO.* ⚡
 
-[![Download Latest Release](https://img.shields.io/badge/🚀_Download_AiLive-Releases-00b4d8?style=for-the-badge)](https://github.com/KennyG1990/AiLive/releases)
-[![Player Guide](https://img.shields.io/badge/📖_Player_Guide-Read_Docs-f77f00?style=for-the-badge)](docs/PLAYER-GUIDE.md)
-[![Features & Dev Notes](https://img.shields.io/badge/🛠️_Under_the_Hood-Feature_Notes-7209b7?style=for-the-badge)](docs/FEATURES-AND-DEVELOPMENT.md)
-[![Discord Community](https://img.shields.io/badge/💬_Discord-Join_the_Fleet-5865F2?style=for-the-badge)](https://discord.gg/5zwxzRvDY)
+[![Download AiLive](https://img.shields.io/badge/🚀_Download_AiLive-00b4d8?style=for-the-badge)](https://github.com/KennyG1990/AiLive/releases)
+[![Releases](https://img.shields.io/badge/📦_Releases-0077b6?style=for-the-badge)](docs/RELEASES.md)
+[![Player Guide](https://img.shields.io/badge/📖_Player_Guide-f77f00?style=for-the-badge)](docs/PLAYER-GUIDE.md)
+[![Read Docs](https://img.shields.io/badge/📚_Read_Docs-2a9d8f?style=for-the-badge)](docs/READ-DOCS.md)
+[![Under the Hood](https://img.shields.io/badge/🛠️_Under_the_Hood-e63946?style=for-the-badge)](docs/UNDER-THE-HOOD.md)
+[![Feature Notes](https://img.shields.io/badge/📋_Feature_Notes-7209b7?style=for-the-badge)](docs/FEATURES-AND-DEVELOPMENT.md)
+[![Discord Community](https://img.shields.io/badge/💬_Join_the_Fleet-5865F2?style=for-the-badge)](https://discord.gg/5zwxzRvDY)
 
 ---
 
@@ -36,15 +39,15 @@ Hail any captain, station manager, or faction liaison—face-to-face on the dock
 Stop micromanaging fifty map waypoints. Build an **Officer Corps** that thinks, argues, competes, learns, and bleeds under your flag:
 * ⚓ **Seven Naval Ranks & Billets:** Promote standout pilots from **Lieutenant to Admiral**, organize squadrons, and appoint commanders to permanent billets defending your borders or leading carrier strike groups.
 * 📜 **Write Your Fleet Doctrine & Standing Mandates:** Author your own **Fleet Doctrine** (*"Never chase raiders outside our sectors"*, *"Withdraw any wing that loses half its ships"*) and hand out **Standing Mandates** (*Patrol*, *Escort*, *Hold the Gate*, *Supply the Front*).
-* 🔥 **Officers With Spine & Conviction:** Officers aren't mindless drones. A bold Split commander may chafe under a defensive leash; a cautious veteran will push back when ordered into a suicidal kill-zone. After a quiet battle, officers file **After-Action Reviews**, learn personal combat lessons, and even recommend changes to your fleet doctrine!
-* 🏆 **Rivalries, Mentorship & Battle Honours:** Watch veterans mentor green ensigns, rivals clash over promotions, and crews earn **Battle Honours ribbons**.
-* 🚨 **Empty Chairs & MIA Rescue:** When a flagship goes down, you don't just lose a hull—an officer you know by name goes **MISSING / ADRIFT** in the wreckage, waiting to see if you'll launch a search-and-rescue before time runs out.
+* 🔥 **Officers With Spine & Conviction:** Officers aren't mindless drones. When an order can't be carried out, they come to you with real **Courses of Action**, not robotic excuses. After a quiet battle, officers file **After-Action Reviews**, learn personal combat lessons, and even recommend changes to your fleet doctrine!
+* 🏆 **Rivalries, Mentorship & Battle Honours:** Watch veterans mentor green ensigns, rivals clash over promotions, officers name their own ships, and crews earn **22+ decorations & Battle Honours ribbons**.
+* 🚨 **Empty Chairs & MIA Rescue:** When a flagship goes down, you don't just lose a hull—an officer you know by name goes **MISSING / ADRIFT** in their spacesuit, waiting to see if you'll launch a search-and-rescue before time runs out.
 
 ---
 
 ### 📨 3. Distance Has Teeth — Couriers, Envoys & Deep-Space Comms
 In AiLive, information doesn't teleport across the jump network by magic. **Talk freely in your own sector—beyond that, words have to fly.**
-* 🚀 **Physical Courier Dispatches:** Sending secret battle orders, recon reports, or a diplomatic ultimatum across the galaxy? Assign a fast courier ship to physically fly the jump gates and deliver it in person.
+* 🚀 **Physical Courier Dispatches:** Sending secret battle orders, recon reports, or a diplomatic ultimatum across the galaxy? Assign a fast courier ship to physically fly the jump gates, hunt down a moving recipient, and deliver your letter in person.
 * 📡 **The Scout's Dilemma:** When a deep-space scout spots an incoming invasion beyond comm range with no courier nearby, they face a gut-wrenching choice: keep silent watch, or abandon their post and burn hard for home to warn you personally.
 * 🕊️ **Interceptable Faction Envoys:** AI empires play by the exact same rules! When a battered faction wants peace, they launch a real fighter envoy across the sectors to plead their case before a rival council. **If that envoy is destroyed en route, the peace talks die in the wreckage.**
 
@@ -52,7 +55,7 @@ In AiLive, information doesn't teleport across the jump network by magic. **Talk
 
 ### 🕵️‍♂️ 4. Shadows Between the Gates — Three-Way Espionage & Mole Hunts
 There is no "omniscient AI" in AiLive. Every secret—your fleet orders, station shortages, courier dispatches, and covert deals—lives on the **personal ledger of the individuals who actually know it.**
-* 🗡️ **Turn Enemy Captains:** Bribe, blackmail, or sweet-talk a rival faction's destroyer captain into feeding you intel—or defecting when the shooting starts.
+* 🗡️ **Turn Enemy Captains:** Bribe, blackmail, or sweet-talk a rival faction's destroyer captain into feeding you intel—or defecting to your fleet when the shooting starts.
 * 📦 **Ambush the Messenger:** Intercept an enemy courier in deep space to seize their dispatches and read a rival empire's war plans before their own admirals do.
 * 🔍 **Hunt the Mole in Your Ranks:** If a hostile faction suddenly knows your patrol routes, someone in your chain of command is leaking. Trace who held the secret, interrogate suspects, and plug the leak before your fleet flies into an ambush.
 
@@ -107,12 +110,17 @@ AiLive is built on one ironclad rule: **No Magic. No Cheating.**
 
 ---
 
-## 🚀 Ready to Wake Up the Galaxy?
+## 🧭 Explore the AiLive Documentation Suite
 
-1. 📥 **[Download the Latest Release](https://github.com/KennyG1990/AiLive/releases)** — Grab the ready-to-install zip package.
-2. 📖 **[Read the Player Guide](docs/PLAYER-GUIDE.md)** — Setup takes 2 minutes. Learn how to open your first comm-link, commission officers, and run the galaxy.
-3. 🛠️ **[Explore Features & Development Notes](docs/FEATURES-AND-DEVELOPMENT.md)** — Dive deep into naval ranks, doctrine, courier networks, espionage ledgers, and faction politics.
-4. 💬 **[Join the Discord Community](https://discord.gg/5zwxzRvDY)** — Share your wildest war stories, get support, and help shape the next frontier of AiLive!
+| Section | What You'll Find Inside |
+| :--- | :--- |
+| 🚀 **[Download Latest Release](https://github.com/KennyG1990/AiLive/releases)** | Grab the ready-to-install `x4_AiLive` zip archive from GitHub Releases. |
+| 📦 **[Releases & Changelog](docs/RELEASES.md)** | Version-by-version release history (`v2.4.0 RC1` down to `v2.0.1`), upgrade notes, and save-safety fixes. |
+| 📖 **[Player Guide](docs/PLAYER-GUIDE.md)** | 2-minute installation, Player2 setup, and a hands-on guide to your first 15 minutes in game. |
+| 📚 **[Read Docs (Field Manual)](docs/READ-DOCS.md)** | Chat commands (`whereis`, `range`, `/raw`), Hub tabs, the 7 Naval Ranks, and all 22+ Honours & Ribbons. |
+| 🛠️ **[Under the Hood](docs/UNDER-THE-HOOD.md)** | How AiLive works inside X4: deterministic guardrails, person-level secret ledgers, AARs, and 90+ automated test gates. |
+| 📋 **[Feature Notes & Roadmap](docs/FEATURES-AND-DEVELOPMENT.md)** | Live campaign records, proven vs. gate-tested features, and the 4X Pillars × Politics, Economy, Military & Social roadmap. |
+| 💬 **[Discord Community](https://discord.gg/5zwxzRvDY)** | Share your wildest war stories, report RC feedback, and help shape the next frontier of AiLive. |
 
 ---
 
