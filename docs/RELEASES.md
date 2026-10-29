@@ -10,18 +10,41 @@
 
 ---
 
-## 🚀 Latest Release: `v2.4.0-rc.1` — *Comms Are a Resource*
+## 🚀 Latest Release: `v2.5.0-rc.1` — *The Chain of Command*
 
-> 📥 **[Download `x4_AiLive-2.4.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.4.0-rc.1)**
+> 📥 **[Download `x4_AiLive-2.5.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.5.0-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-### ⚠️ Critical Save-Safety Fix in `2.4.0` (Please Upgrade!)
+**Upgrading from `2.4.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list now shows **2.50** (earlier releases all showed 2.10 by mistake).
+
+### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters (such as a narrow no-break space or non-breaking hyphen) that were split in half during string truncation. When X4's XML save loader encountered the broken byte (`LIBXML2 ... error 81: Invalid bytes in character encoding`), it rejected the block and reset character memories and the Officer Corps.
 * **`v2.4.0-rc.1` sanitizes every text string before it reaches the save.** Proven in live game saves: new saves scan 100% clean, and repaired older saves load with their full memory intact.
 
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 🎖️ [`v2.5.0-rc.1` — The Chain of Command](https://github.com/KennyG1990/AiLive/releases/tag/v2.5.0-rc.1) *(Oct 29, 2026)*
+**Your officers now serve in a real chain of command.** The CORPS board shows every seat and who holds it, officers learn by doing, a commander forms a wing from the ships you name, people tell fact from rumour, and news travels at the speed of the jump gates.
+
+* **Proven in Game:**
+  * **🎖️ The CORPS Board (`AiLive hub > CORPS`):** Every seat from Ship Command to the Fleet, who holds it, acting or in his own right, and who he reports to. Open an officer's file and **HAIL** him from it; **Orders of the Day** list what waits for your decision, and **KEEP ACTING** settles an officer acting above his rank.
+  * **📈 Officers Learn by Doing:** Skill rises from the real tasks an officer carries out (seen live: a finished patrol raised a captain's piloting from 0 to 1).
+  * **✈️ A Wing From the Ships You Name:** *"Take Dragon Raiders CPJ-448 and RXO-385 under your command as a defence wing for the Aurora"* — the named ships are taken first and the wing holds its defence role.
+  * **📰 The Newspaper (`NEWS` tab):** The galaxy's news laid out as THE PRESS.
+  * **🛰️ News at the Game's Pace:** Far-off events reach people a quarter of an hour per jump gate later; those who have not heard yet do not know.
+  * **💾 Journal Restore:** The backup journal restores AiLive's records end to end.
+* **Built & Gate-Tested (Waiting for First Live Occurrence):**
+  * **⚓ An Acting Officer Holds His Post in Full:** command, knowledge and the decision under fire follow the post; pay, honours and promotion follow his own rank. New settings: *An acting appointment carries its post's command* and *Ships a post commands* (`SETTINGS > MILITARY > PROMOTIONS`).
+  * **🪪 Fleet Rank on the Comm Channel:** your captain's rank first, then his job.
+  * **🛡️ Officers Under Fire:** ships defend themselves under your standing orders; a Commander or above decides how to fight or sends a situation report up the chain.
+  * **🧠 People Who Think for Themselves:** fact told from rumour, belief shaped by character, bluffs rolled, memories that fade and condense.
+  * **🕵️ Spies and Secrets:** named agents with character sheets, factions that decide to spy, security clearances, counter-intelligence run by a named officer.
+  * **⚖️ Careers and Justice:** superiors look after careers, promotions by the regulations, and a Code of Service Discipline.
+  * **🏛️ Councils and the Economy:** councils cite dated harms, war fatigue wears realms down, every credit you spend lands once in the payee's treasury, and the evening newscast keeps the war fronts its news is about.
+
+---
 
 ### 📡 [`v2.4.0-rc.1` — Comms Are a Resource](https://github.com/KennyG1990/AiLive/releases/tag/v2.4.0-rc.1) *(Oct 26, 2026)*
 **Who you can reach now depends on where you are.** Beyond your sector comm range, you dispatch physical courier ships that fly through jump gates, track down moving recipients, and return with their answer—and AI faction rulers must do the exact same thing.
