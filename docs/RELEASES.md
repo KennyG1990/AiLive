@@ -10,20 +10,31 @@
 
 ---
 
-## 🚀 Latest Release: `v2.5.0-rc.1` — *The Chain of Command*
+## 🚀 Latest Release: `v2.6.0-rc.1` — *The Command Hub*
 
-> 📥 **[Download `x4_AiLive-2.5.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.5.0-rc.1)**
+> 📥 **[Download `x4_AiLive-2.6.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.6.0-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `2.4.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list now shows **2.50** (earlier releases all showed 2.10 by mistake).
+**Upgrading from `2.5.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.60**.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
-Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters (such as a narrow no-break space or non-breaking hyphen) that were split in half during string truncation. When X4's XML save loader encountered the broken byte (`LIBXML2 ... error 81: Invalid bytes in character encoding`), it rejected the block and reset character memories and the Officer Corps.
-* **`v2.4.0-rc.1` sanitizes every text string before it reaches the save.** Proven in live game saves: new saves scan 100% clean, and repaired older saves load with their full memory intact.
+Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
 
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 🧭 [`v2.6.0-rc.1` — The Command Hub](https://github.com/KennyG1990/AiLive/releases/tag/v2.6.0-rc.1) *(Nov 5, 2026)*
+**Your whole command on one screen.** The hub (`CTRL+SHIFT+U`) gains a tab for every part of it - FLEET, CORPS, DOCTRINE, DOSSIER, INFLUENCE, INTEL, POWER, THE WORLD, SETTINGS and DEBUG - your officers call you and file routine reports in the native Logbook, and you can write your own lore and rules for how the galaxy tells its story.
+
+* **Proven in Game:**
+  * **🧭 The Command Hub:** FLEET (the operations room and the campaigns you uncovered), CORPS (chain of command, insignia, offices, honours, bonds), DOCTRINE (honours, the operation order sheet, ranks), DOSSIER (every realm you know and its representative), INFLUENCE (the councils), INTEL (what you know, what your ships saw, who wants it), POWER, SETTINGS on one page, DEBUG systems health.
+  * **🌍 THE WORLD:** HOUSE RULES, PUBLIC FACTS and each people's TRADITIONS reach the characters they touch (an Argon representative quoted the commander's fact back), and never change dice, money, ships or orders.
+  * **📞 Officers Call and Report:** an officer's call rings (answer with `CTRL+SHIFT+B`); routine reports go to the **Logbook** with Show on Map; reports carry the engine's own failure records.
+  * **🤝 Officer Ties:** your officers know who they served with and where, from the service record ("fifty days within Squadron 1").
+  * **🧭 First-Run Guide:** a short setup guide the first time you open the hub on a save.
+* **Built & Gate-Tested (Waiting for First Live Occurrence):** earned contacts across a full save/load, council grievance pacing, capture memory, comrades and at-odds ties in conversation.
+* **Known Issues:** selling intelligence can show a PAYMENT REQUESTED card with you paying - do not confirm it; an unreachable operation leg is re-issued every review until you stand the operation down; "your wing" can be given to the commander's own ship.
 
 ### 🎖️ [`v2.5.0-rc.1` — The Chain of Command](https://github.com/KennyG1990/AiLive/releases/tag/v2.5.0-rc.1) *(Oct 29, 2026)*
 **Your officers now serve in a real chain of command.** The CORPS board shows every seat and who holds it, officers learn by doing, a commander forms a wing from the ships you name, people tell fact from rumour, and news travels at the speed of the jump gates.
