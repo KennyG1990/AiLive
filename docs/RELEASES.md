@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v2.6.0-rc.1` — *The Command Hub*
+## 🚀 Latest Release: `v2.7.0-rc.1` — *The Living Galaxy*
 
-> 📥 **[Download `x4_AiLive-2.6.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.6.0-rc.1)**
+> 📥 **[Download `x4_AiLive-2.7.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.7.0-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `2.5.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.60**.
+**Upgrading from `2.6.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.70**. Keep a backup of your save: this is a large beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,20 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 🌌 [`v2.7.0-rc.1` — The Living Galaxy](https://github.com/KennyG1990/AiLive/releases/tag/v2.7.0-rc.1) *(Nov 11, 2026)*
+**The galaxy now has a story you are in the middle of.** Crises between realms run as storylines with chapters, rulers proclaim their moves, a newscast reports them, and your own territory, trade and officers each get their own screens and voices. About 450 changes since 2.6.0. **A beta: expect bugs.**
+
+* **In this build:**
+  * **📜 Storylines & Proclamations:** tension, ultimatum, war and peace as chapters (INFLUENCE > STORYLINES); rulers proclaim public moves on a full card (`CTRL+SHIFT+N`); councils sit about every 8 game hours and an ultimatum runs its full deadline.
+  * **📰 Galactic News:** an anchor who remembers recent headlines, a weekly summary, and reports on power crises, sector control and epidemics.
+  * **🏛️ GOVERNMENT & THE COURT:** your sectors and stations and who governs them, how other realms are ruled, and who speaks for you at each court.
+  * **💰 POWER & Trade:** sworn realms, loans, trade pressure, standing supply contracts agreed in conversation with station managers, and "buy nearby, then deliver" orders for captains.
+  * **🎓 Fleet School Battle Exam:** officers escort a convoy against raiders on radar alone, with a briefing, questions, a plan and a turn-by-turn review.
+  * **🎖️ Officers:** promotions inside the chain, Marine pilots with their own ranks, more mission kinds, and every notice written in a person's own words.
+  * **🧹 The Hub:** explainer captions removed from every tab; many fixes.
+* **Built & Gate-Tested (Waiting for First Live Occurrence):** an order for a ship further down the chain passed on by your admiral; a captain abroad asking you for orders when an ultimatum lands; a realm with no reserves no longer repeating reinforcement orders; one-message "buy and sell" orders.
+* **Known Issues:** the chain of command is hard to learn without a military background and an officer who cannot help does not yet say who can (a fix is planned); controller use of the hub is untested; a 2.6.0 save has not been tested against this build specifically.
 
 ### 🧭 [`v2.6.0-rc.1` — The Command Hub](https://github.com/KennyG1990/AiLive/releases/tag/v2.6.0-rc.1) *(Nov 5, 2026)*
 **Your whole command on one screen.** The hub (`CTRL+SHIFT+U`) gains a tab for every part of it - FLEET, CORPS, DOCTRINE, DOSSIER, INFLUENCE, INTEL, POWER, THE WORLD, SETTINGS and DEBUG - your officers call you and file routine reports in the native Logbook, and you can write your own lore and rules for how the galaxy tells its story.
