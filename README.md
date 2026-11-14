@@ -119,6 +119,7 @@ AiLive is built on one ironclad rule: **No Magic. No Cheating.**
 | 📖 **[Player Guide](docs/PLAYER-GUIDE.md)** | 2-minute installation, Player2 setup, and a hands-on guide to your first 15 minutes in game. |
 | 📚 **[Read Docs (Field Manual)](docs/READ-DOCS.md)** | Chat commands (`whereis`, `range`, `/raw`), Hub tabs, the 7 Naval Ranks, and all 22+ Honours & Ribbons. |
 | 🛠️ **[Under the Hood](docs/UNDER-THE-HOOD.md)** | How AiLive works inside X4: deterministic guardrails, person-level secret ledgers, AARs, and 90+ automated test gates. |
+| 🧩 **[About the Three DLL Files](docs/ABOUT-THE-DLLS.md)** | What the three bundled libraries are, what each one does, their public source and build record, and checksums you can verify yourself. |
 | 📋 **[Feature Notes & Roadmap](docs/FEATURES-AND-DEVELOPMENT.md)** | Live campaign records, proven vs. gate-tested features, and the 4X Pillars × Politics, Economy, Military & Social roadmap. |
 | 💬 **[Discord Community](https://discord.gg/5zwxzRvDY)** | Share your wildest war stories, report RC feedback, and help shape the next frontier of AiLive. |
 
