@@ -1,0 +1,54 @@
+name: Upload release to Nexus Mods
+
+# Uploads the tested zip attached to a published release to the AiLive page on Nexus Mods (mod 2600).
+# Needs: repository secret NEXUSMODS_API_KEY (a Nexus Mods API key) and repository variable NEXUSMODS_FILE_ID.
+# The zip is never rebuilt here: Nexus receives the same file the release carries.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to upload (for example v2.9.0-rc.1)'
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  nexus:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.release.tag_name || github.event.inputs.tag }}
+    steps:
+      - name: Download the release zip
+        run: gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern 'x4_AiLive-*.zip' --output mod.zip
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Version and changelog from the release
+        id: meta
+        run: |
+          echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json body --jq .body > body.md
+          {
+            echo "changelog<<CHANGELOG_EOF"
+            grep -E '^[[:space:]]*[-*] ' body.md | sed -E 's/^[[:space:]]*[-*] //; s/\*\*//g' | head -12
+            echo "CHANGELOG_EOF"
+          } >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Upload to Nexus Mods
+        uses: Nexus-Mods/upload-action@v1.0.0-beta.11
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_id: ${{ vars.NEXUSMODS_FILE_ID }}
+          mod_id: 2600
+          filename: mod.zip
+          version: ${{ steps.meta.outputs.version }}
+          display_name: AiLive ${{ steps.meta.outputs.version }}
+          archive_existing_version: true
+          update_mod_version: true
+          changelog: ${{ steps.meta.outputs.changelog }}
