@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v2.8.0-rc.2` — *First Days in Command*
+## 🚀 Latest Release: `v2.9.0-rc.1` — *Errands and the Whole Fleet*
 
-> 📥 **[Download `x4_AiLive-2.8.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.8.0-rc.2)**
+> 📥 **[Download `x4_AiLive-2.9.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.0-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `2.7.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.80**. Keep a backup of your save: this is a beta build.
+**Upgrading from `2.8.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.90**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,20 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v2.9.0-rc.1` — Errands and the Whole Fleet](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.0-rc.1) *(Nov 14, 2026)*
+**Eleven builds on top of 2.8.0 RC2.** **A beta: expect bugs.**
+
+* **New:**
+  * **Delivery errands.** A station manager asks for a set amount within a number of hours; take it by word, every sale by your ships counts, and the manager tells you how it ended. Settings under ECONOMIC > CONTRACTS.
+  * **A top-up for an errand kept in full**, up to 25% on what the dock pays, paid by the manager's realm as its treasury can.
+  * **Senior officers know the whole fleet.** Asked about the fleet, an officer answers for every ship that answers to them through the corps chain, not only their own wing, and names the day's losses.
+* **Fixed:**
+  * A supply deal is never signed for more than you offered ("2,000 in total" can no longer become 2,000 an hour).
+  * An officer cannot hand down a mission naming a ship the subordinate does not command; they say so.
+  * Officers commanding a ship are addressed by their real grade; receipts say "now holding position" and "now moving".
+  * No other mod is listed as a dependency.
+* **Known Issues:** closing a supply deal is hard in this build (a manager may repeat "I have not signed those terms"); an order for a ship several seats down the chain is relayed officer by officer; a false "Not done" line can appear beside a correct "ACCEPTED - Mission passed"; controller use of the hub is untested.
 
 ### 🧭 [`v2.8.0-rc.2` — First Days in Command](https://github.com/KennyG1990/AiLive/releases/tag/v2.8.0-rc.2) *(Nov 14, 2026)*
 **Two builds on top of RC1.** Everything in RC1 still applies. **A beta: expect bugs.**
