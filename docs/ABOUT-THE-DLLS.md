@@ -8,11 +8,13 @@ X4 runs mod scripts in a sandbox that has no way to open a network connection. A
 
 Without them the mod still loads and the hub still opens, but nobody ever answers you.
 
+**AiLive needs no other mod.** These three files are everything it relies on besides the game and the Player2 app. Earlier versions used SirNukes' Mod Support APIs for hotkeys; that ended when we wrote our own hotkey reader (the third file below), and any note that still says otherwise is out of date.
+
 ## The three files
 
 | File | What it is | What it does in AiLive |
 | :--- | :--- | :--- |
-| `lua3p/luasocket/core.dll` | **LuaSocket 3.1.0**, a widely used open-source networking library (MIT licence). Not written by us. | Lets the game send a request to the Player2 app on your own machine (`127.0.0.1:4315`) and read the reply. If you point AiLive at another service yourself in its settings (a local Ollama or KoboldCpp, for example), it talks to that address instead. It connects to nothing you have not set. |
+| `lua3p/luasocket/core.dll` | **LuaSocket 3.1.0**, a widely used open-source networking library (MIT licence). Not written by us. (It reports itself as "LuaSocket 3.0.0" in the game's log; the 3.1.0 release kept the old version text in its source.) | Lets the game send a request to the Player2 app on your own machine (`127.0.0.1:4315`) and read the reply. If you point AiLive at another service yourself in its settings (a local Ollama or KoboldCpp, for example), it talks to that address instead. It connects to nothing you have not set. |
 | `lua3p/cjson/cjson.dll` | **lua-cjson 2.1.0.19** from OpenResty, an open-source JSON reader and writer (MIT licence). Not written by us. | Packs and unpacks the mod's own saved records quickly. It has no network or file access of its own. |
 | `lua3p/aickeys/aickeys.dll` | **Our own**, 58 lines of C. The full source is in this repository: [`native/aickeys/aickeys.c`](../native/aickeys/aickeys.c). | Makes the hub hotkeys work (`CTRL+SHIFT+U` and the others). X4 gives mods no way to read a key combination, so this asks Windows "is this key down right now?" |
 
@@ -56,7 +58,7 @@ The tool Egosoft gives modders for uploading to the Steam Workshop only accepts 
 We are telling you this plainly because a program file with a text-file name is exactly the kind of thing that should make you look twice.
 
 - They are the **same three files**, byte for byte. Only the name differs, so the checksums above still apply.
-- We did not invent this and we are not the only ones who do it. It is how X4 mods that need a native library get onto the Workshop; SirNukes' Mod Support APIs, for example, ships its library the same way.
+- We did not invent this and we are not the only ones who do it. It is how X4 mods that need a native library get onto the Workshop; SirNukes' Mod Support APIs, for example, ships its library the same way. (That mod is only an example of the practice. AiLive does not use it or need it.)
 - The mod cannot work on the Workshop without it, for the reason at the top of this page.
 
 If you would rather not have it that way, install the zip from the [releases page](https://github.com/KennyG1990/AiLive/releases) instead: there the files keep their `.dll` names.
