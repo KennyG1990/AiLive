@@ -2,9 +2,9 @@
 
 For authors of add-ons that run beside AiLive. We post here **before** a release when something an add-on touches is going to change, so you can adjust in time. Watch this file (or the repository) to be told when it changes; the commit history is the change log.
 
-Last updated: 11 Nov 2026.
+Last updated: 13 Nov 2026.
 
-- [1. Current release and your contact points](#1-current-release-ailive-270-rc1)
+- [1. Current release and your contact points](#1-current-release-ailive-280-rc1)
 - [2. Advance notice: planned changes](#2-advance-notice-planned-changes)
 - [3. The add-on interface, version 1](#3-the-add-on-interface-version-1)
 - [4. Requests we have received](#4-requests-we-have-received)
@@ -12,7 +12,24 @@ Last updated: 11 Nov 2026.
 
 ---
 
-## 1. Current release: AiLive 2.7.0 RC1
+## 1. Current release: AiLive 2.8.0 RC1
+
+Released 13 Nov 2026, build `#1110b646`.
+
+We checked every contact point on the AiLive Voice list against the 2.8.0 release files, the same way as for 2.7.0.
+
+**Result: every function, table, event, MD reference and prompt marker on that list is still present in 2.8.0, with the same name and the same arguments.** Nothing was removed or renamed. The table under "Earlier release" below still describes them.
+
+### What changed in 2.8.0 that may affect an add-on
+
+1. **`SendDirectChat(ctx, text, onReply)` grew again** (about 5%). Same arguments. A wrapper that calls the original should hold; re-test anything that depends on what happens inside it.
+2. **The hub's own key opens the hub with no tab asked for.** `AIC_Hub_Menu.open(tab)` is unchanged, but the built-in key now calls `open(nil)`; the hub keeps its remembered tab, and on a save where it has not been shown yet it lands once on a new GETTING STARTED page. If you open the hub yourself and want a particular page, pass the tab as before.
+3. **A new kind of voiced message.** During a save's first days the commander's second-in-command writes short letters (voice family `guide`, counted with the other `voices` calls, at most ten on a save). Off with SETTINGS > OTHER > INTERFACE > Getting started > NOTICES ONLY.
+4. **`_officerCalls` has one more reader.** A courier feature reads `delivered`; the table and its fields are as before.
+5. **`AIChat.open` has more listeners** inside AiLive (the getting-started page ticks "hail" from it). The event and its payload are unchanged.
+6. **The add-on interface (section 3) ships in this release** as described there; nothing in it changed since it was first published here.
+
+## Earlier release: AiLive 2.7.0 RC1
 
 Released 11 Nov 2026, build `#1110b555`.
 
