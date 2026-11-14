@@ -10,9 +10,9 @@
 
 ---
 
-## 🚀 Latest Release: `v2.8.0-rc.1` — *First Days in Command*
+## 🚀 Latest Release: `v2.8.0-rc.2` — *First Days in Command*
 
-> 📥 **[Download `x4_AiLive-2.8.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.8.0-rc.1)**
+> 📥 **[Download `x4_AiLive-2.8.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.8.0-rc.2)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
 **Upgrading from `2.7.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.80**. Keep a backup of your save: this is a beta build.
@@ -23,6 +23,15 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 🧭 [`v2.8.0-rc.2` — First Days in Command](https://github.com/KennyG1990/AiLive/releases/tag/v2.8.0-rc.2) *(Nov 14, 2026)*
+**Two builds on top of RC1.** Everything in RC1 still applies. **A beta: expect bugs.**
+
+* **Fixed since RC1:**
+  * A lone move order now ends: the ship is reported as having reached the sector and ORDER FLOW shows it done.
+  * An order cancelled while the ship is in a highway is held until the ship leaves it, then carried out.
+  * ORDER FLOW says "now moving" for a move order; the conversation rail names a filed report ("AAR filed", "SITREP filed").
+* **Known Issues:** a letter that arrives while the hub is open is easy to miss (it is in Messages); an offer that names a total can be signed as an hourly contract; controller use of the hub is untested.
 
 ### 🧭 [`v2.8.0-rc.1` — First Days in Command](https://github.com/KennyG1990/AiLive/releases/tag/v2.8.0-rc.1) *(Nov 13, 2026)*
 **A new commander can now find their feet.** The hub opens on nine things to try, your second-in-command writes to you as you do them, orders report how they really ended, and losses are answered for. About 90 builds since 2.7.0. **A beta: expect bugs.**
