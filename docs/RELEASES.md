@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v2.7.0-rc.1` — *The Living Galaxy*
+## 🚀 Latest Release: `v2.8.0-rc.1` — *First Days in Command*
 
-> 📥 **[Download `x4_AiLive-2.7.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.7.0-rc.1)**
+> 📥 **[Download `x4_AiLive-2.8.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.8.0-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `2.6.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.70**. Keep a backup of your save: this is a large beta build.
+**Upgrading from `2.7.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.80**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,19 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 🧭 [`v2.8.0-rc.1` — First Days in Command](https://github.com/KennyG1990/AiLive/releases/tag/v2.8.0-rc.1) *(Nov 13, 2026)*
+**A new commander can now find their feet.** The hub opens on nine things to try, your second-in-command writes to you as you do them, orders report how they really ended, and losses are answered for. About 90 builds since 2.7.0. **A beta: expect bugs.**
+
+* **In this build:**
+  * **🎓 Getting Started:** nine first-days tasks ticked by really doing them, letters from your second-in-command, a guide page for every part of AiLive and a plain-words glossary (`THE WORLD > GETTING STARTED`).
+  * **📡 Orders that tell the truth:** a ship that arrived says so, ORDER FLOW names orders in plain words, orders reach ships down the chain, and a captain can take a matter to their superior and bring back the answer.
+  * **🕯️ Losses:** survivors are a call that asks you, the memorial keeps a loss file for each ship, and officers remember where ships were lost.
+  * **💰 Trade:** station managers ask you to supply real open orders and thank you on delivery; captains sell as well as buy and can read the local market; `POWER > TRADE > REQUESTS TO YOU`.
+  * **🗣️ The People:** what each realm's people believe about you and how far it moves their council (`INFLUENCE > THE PEOPLE`).
+  * **💬 Conversations:** the rail names what the other person knows in whole words; the expanded view keeps SEND clear of the video.
+* **Built & Gate-Tested (Waiting for First Live Occurrence):** a battle of six or more sides on a news card; a manager's counter-offer; a council hearing the people's pressure again after refusing it.
+* **Known Issues:** a letter that arrives while the hub is open is easy to miss (it is in Messages); an offer that names a total can be signed as an hourly contract; a lone move order shows as under way after arrival; controller use of the hub is untested.
 
 ### 🌌 [`v2.7.0-rc.1` — The Living Galaxy](https://github.com/KennyG1990/AiLive/releases/tag/v2.7.0-rc.1) *(Nov 11, 2026)*
 **The galaxy now has a story you are in the middle of.** Crises between realms run as storylines with chapters, rulers proclaim their moves, a newscast reports them, and your own territory, trade and officers each get their own screens and voices. About 450 changes since 2.6.0. **A beta: expect bugs.**
