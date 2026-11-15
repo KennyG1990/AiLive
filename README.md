@@ -32,6 +32,9 @@ Hail any captain, station manager, or faction liaison—face-to-face on the dock
 * 🧠 **Long-Term Memory & Grudges:** Break a promise, abandon a wingman, or stiff a supplier, and they will remember it hours later. Save their hull in a Xenon ambush, and they'll follow you into the fire.
 * 🎭 **Distinct Alien Personalities:** Paranid officers demand reverence. Split captains respect dominance and blood. Teladi managers smell profit in your desperation. Argon veterans question reckless orders.
 * 🤥 **Caught in a Lie:** Bluff about a relief fleet that isn't coming or double-cross a trading partner—when the truth comes out, watch their trust evaporate and their tone turn icy.
+* 🎲 **Persuade, Threaten, Deceive — Then the Dice Decide:** Push a reluctant officer or a stubborn manager with a real attempt. Who they are, what they owe you and what you can prove all shift the odds—then the dice judge it. No guaranteed wins, no rigged losses.
+* 📎 **Throw Their Own Words Back at Them:** Every promise, refusal, threat and favour lands on the record. Click a line of **Leverage** to hold someone to what they actually said and did—*"verified by her own records."*
+* 🧾 **They Know What They're Facing:** A station starved of hull parts, a realm at war, a treasury running dry—what the other side is really up against sways the deal, and you see it right under the odds. *(Arrives in the next release.)*
 
 ---
 
@@ -42,6 +45,13 @@ Stop micromanaging fifty map waypoints. Build an **Officer Corps** that thinks, 
 * 🔥 **Officers With Spine & Conviction:** Officers aren't mindless drones. When an order can't be carried out, they come to you with real **Courses of Action**, not robotic excuses. After a quiet battle, officers file **After-Action Reviews**, learn personal combat lessons, and even recommend changes to your fleet doctrine!
 * 🏆 **Rivalries, Mentorship & Battle Honours:** Watch veterans mentor green ensigns, rivals clash over promotions, officers name their own ships, and crews earn **22+ decorations & Battle Honours ribbons**.
 * 🚨 **Empty Chairs & MIA Rescue:** When a flagship goes down, you don't just lose a hull—an officer you know by name goes **MISSING / ADRIFT** in their spacesuit, waiting to see if you'll launch a search-and-rescue before time runs out.
+* 🗂️ **Dossiers With a Soul:** Every officer has nerve, a sense of duty, suspicion and greed, real skills, a security clearance, a career record—and private thoughts they'd rather you never read.
+* 📋 **Orders of the Day & Promotions in Person:** Postings, vacancies and promotions queue up for your decision. Promotions follow the regulations, and you give them **in person**—hail the officer and tell them yourself.
+* 🏫 **The Fleet School:** Officers sit real exams on a battle chart, turn by turn. Read what they were thinking, see the moment they lost the convoy, hear the head of school's verdict—and watch them earn it back on the re-sit.
+* ⚖️ **Military Justice With a Citable Code:** Your officers know the **Code of Service Discipline** section by section. Lay charges, convene boards over lost ships and friendly fire, and send the worst offenders to **court martial**.
+* 📡 **Reports Up the Chain:** Commanders file consolidated **SITREPs** to their superiors, and your senior officers answer for every ship beneath them—strength, makeup and the day's losses.
+* 🕯️ **The Fleet Remembers:** The fallen are honoured **In Memoriam** with a eulogy from their senior officer. Every decoration names the deed that earned it, squadrons fly their own insignia and mottos, and the mess has stories of its own.
+* 🪖 **Marines in the Cockpit:** Fighter and small-craft pilots can serve as enlisted **Marines**, with ranks of their own.
 
 ---
 
@@ -67,7 +77,39 @@ Why glass a sector with plasma when you can make it kneel through leverage, indu
 * 🚢 **Broker Warship Sales:** Negotiate directly with faction representatives to buy or sell real warships built from real shipyard queues.
 * 🏛️ **Sway Faction Councils:** Step into high-stakes diplomatic sessions to issue a **Call to Arms** against a mutual rival—or **Counsel Peace** to rescue a crumbling ally before their front collapses.
 * ⚖️ **Protection Pacts & Vassal Realms:** Bring weaker factions under your banner as tribute-paying protectorates. Collect real economic tribute while balancing the delicate political tension of their **Three Estates (Society, Military, and Leaders)**. Push them too hard, and your vassal may erupt from within.
-* 📰 **Living Galactic News:** Read the galaxy's pulse as capital ship kills, broken treaties, supply famines, and regime shifts hit the sector newsfeeds.
+* 📦 **Delivery Errands:** Station managers write to you with real orders—*"834 Microchips within 2 hours."* Take the job by word, make the deliveries, and a manager whose errand you keep in full may add a top-up from her realm's treasury.
+* 🏦 **Loans, Debts & Defaults:** Borrow from real lenders at real interest and pay by installment—or default, and let the galaxy hear about it. Rewards a station can't pay in cash can be settled in goods.
+* 🛃 **Talk Your Way Past the Inspector:** When a patrol stops you to scan your hold, make your case. Some officers hear you out, some look away—and some call it in.
+* 🧨 **Sanctions & Trade War:** Councils answer harms with economic sanctions, and raiders strike at the supply lines that feed a war.
+* 📰 **Living Galactic News:** The **Galactic News Network** is a full newspaper: front page, War, Diplomacy, Economy and Society desks, the week in review, running storylines, and rulers' **proclamations** in their own words—each one following a move that really happened.
+
+---
+
+### 🏛️ 6. Govern Your Space — Governors & Your Own Stations
+Your empire doesn't run on menus. It runs on people you trust.
+* 🏛️ **Appoint Governors in Conversation:** Name a station manager governor of a sector, in your own words. They review their sectors on their own schedule, re-task civilian ships, ask for security when they need it, and report back.
+* 🏭 **Managers Who Know the Books:** Your own station managers report on their stations and quote the accounts—and never send you a bill for doing their jobs.
+* 🔧 **Station Rounds:** The **GOVERNMENT** board lists what each of your stations needs—a manager, cargo drones, money for production, an input about to run out—judged exactly as the game itself judges it. *(Arrives in the next release.)*
+* 💳 **Your Account on Record:** Officers can quote your ledger, and trades made on your orders come back with a receipt.
+
+---
+
+### 🌍 7. A Galaxy That Plays Without You
+The other realms don't wait for your turn. They argue, threaten, bluff, bleed and make peace on their own.
+* 🗳️ **The Council Record:** Every war declared, peace offered, ultimatum issued, protection sworn and petition answered, realm by realm, on the **INFLUENCE** screen.
+* 😩 **War-Weariness:** Realms count every capital ship and fighter they lose. Drag a war out long enough and they reach breaking point and beg for peace.
+* 🃏 **Bluffs and Word & Deed:** Councils bluff. When a threat turns out to be hollow, the whole galaxy sees it.
+* 🔥 **Grudges Between Empires:** Realms remember raids, contested sectors and the shipyard that armed their enemy—and turn them into reasons for war.
+* 🗣️ **Rumours & Whisper Campaigns:** Realms start rumours that shift relations between empires—and a careful spymaster can trace them back to their source.
+* ⚔️ **AI Realms Run Their Own Campaigns:** Fronts open, fleets are sent, commanders act on their own—and foreign captains may defect when the shooting starts.
+
+---
+
+### 🧭 8. Built for the Long Campaign
+* 🖥️ **One Hub for Everything:** DOSSIER, POWER, INFLUENCE, INTEL, NEWS, FLEET, CORPS, GOVERNMENT, DOCTRINE, WORLD and SETTINGS—native X4 screens, one hotkey away.
+* 🧑‍✈️ **Your First Days, Guided:** Your second-in-command writes to you through your first days, one task at a time, and the **GETTING STARTED** page keeps track.
+* 🎛️ **300 Settings — Every Feature Has a Switch:** Turn any system off, change its pace, or pick an alternative ruling, all from the native **SETTINGS** tab.
+* 🧠 **A Thinking Budget for 50-Hour Campaigns:** An hourly allowance keeps background thinking affordable over a long campaign, while your own conversations always come first.
 
 ---
 
@@ -115,7 +157,7 @@ AiLive is built on one ironclad rule: **No Magic. No Cheating.**
 | Section | What You'll Find Inside |
 | :--- | :--- |
 | 🚀 **[Download Latest Release](https://github.com/KennyG1990/AiLive/releases)** | Grab the ready-to-install `x4_AiLive` zip archive from GitHub Releases. |
-| 📦 **[Releases & Changelog](docs/RELEASES.md)** | Version-by-version release history (`v2.4.0 RC1` down to `v2.0.1`), upgrade notes, and save-safety fixes. |
+| 📦 **[Releases & Changelog](docs/RELEASES.md)** | Version-by-version release history (`v2.9.0 RC1` down to `v2.0.1`), upgrade notes, and save-safety fixes. |
 | 📖 **[Player Guide](docs/PLAYER-GUIDE.md)** | 2-minute installation, Player2 setup, and a hands-on guide to your first 15 minutes in game. |
 | 📚 **[Read Docs (Field Manual)](docs/READ-DOCS.md)** | Chat commands (`whereis`, `range`, `/raw`), Hub tabs, the 7 Naval Ranks, and all 22+ Honours & Ribbons. |
 | 🛠️ **[Under the Hood](docs/UNDER-THE-HOOD.md)** | How AiLive works inside X4: deterministic guardrails, person-level secret ledgers, AARs, and 90+ automated test gates. |
