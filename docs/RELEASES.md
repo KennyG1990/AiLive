@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v2.9.0-rc.1` — *Errands and the Whole Fleet*
+## 🚀 Latest Release: `v2.9.5-rc.1` — *Your Own Model, and Accords*
 
-> 📥 **[Download `x4_AiLive-2.9.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.0-rc.1)**
+> 📥 **[Download `x4_AiLive-2.9.5.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.5-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `2.8.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.90**. Keep a backup of your save: this is a beta build.
+**Upgrading from `2.9.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.95**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,21 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v2.9.5-rc.1` — Your Own Model, and Accords](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.5-rc.1) *(Nov 16, 2026)*
+**Nineteen builds on top of 2.9.0 RC1.** **A beta: expect bugs.**
+
+* **New:**
+  * **Run AiLive on your own model server.** SETTINGS > OTHER > CONNECTION: PLAYER2 or YOUR OWN SERVER at a typed address (llama.cpp, KoboldCpp, Ollama, LM Studio, or another PC). Qwen3.5-4B with 32K context runs beside X4 on a 12 GB card, replying in 2-8 s; weaker than Player2, so give simple orders.
+  * **Small talk stays small talk on small models:** a greeting or a plain question gives no order and rolls no dice.
+  * **Accords:** POWER > ACCORDS shows who could found a common-defence Accord with you and the threat you share (see Known Issues).
+  * **Player2 keeps trying:** a conversation Player2's own service turns away is retried for up to 15 seconds.
+  * **A gift's goodwill partly lasts;** **over-ranked officers are posted up;** **a supply talk shows the other side;** **the GOVERNMENT board lists what your stations need;** **the first-days letter stays on GETTING STARTED.**
+* **Fixed:**
+  * People you talk to know whose people they are and their own temperament.
+  * A held promotion says who the grade's open places are owed to.
+  * A supply pitch is heard as one; an unsigned supply talk keeps the manager's own words.
+* **Known Issues:** an Accord proposal reaches the council but it cannot answer yet, and the debug log then repeats an Accords error - please do not propose an Accord in this build; rarer orders on a small local model (attack, mine, trade, buy) can come out as a different order; your own officers' conversations need a 32K-context server; a three-letter ship name is not recognised without its ID code; controller use of the hub is untested.
 
 ### 📦 [`v2.9.0-rc.1` — Errands and the Whole Fleet](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.0-rc.1) *(Nov 14, 2026)*
 **Eleven builds on top of 2.8.0 RC2.** **A beta: expect bugs.**
