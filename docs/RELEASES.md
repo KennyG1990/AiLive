@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v2.9.7-rc.1` — *Officers Who Are People*
+## 🚀 Latest Release: `v2.9.8-rc.1` — *Orders With a Spine*
 
-> 📥 **[Download `x4_AiLive-2.9.7.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.7-rc.1)**
+> 📥 **[Download `x4_AiLive-2.9.8.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.8-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `2.9.6`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.97**. Keep a backup of your save: this is a beta build.
+**Upgrading from `2.9.7`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.98**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,20 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v2.9.8-rc.1` — Orders With a Spine](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.8-rc.1) *(Nov 17, 2026)*
+**Twelve builds on top of 2.9.7 RC1.** **A beta: expect bugs.**
+
+* **New:**
+  * **Officers refuse a fight they cannot win, and break off when hurt:** small craft stay off station defences; "Do it anyway" or "That is an order" sends the refused order once; a badly hurt ship withdraws and asks for resupply (MILITARY > ORDERS: Withdraw when badly hurt, Keep small craft off station defences, Break off at hull, Break off at shield).
+  * **You are told how to insist** when an order is refused as too risky.
+  * **An attack keeps its target:** an order naming the wrong station or faction is refused before anything moves.
+  * **Couriers go home** after bringing back an answer (MILITARY > ORDERS: When a courier is back).
+  * **SYSTEMS HEALTH says what is probably wrong** and what to do (Player2 outage, a local server error, hotkeys that could not start).
+  * **"Fly there and hold"** is one movement order that holds on arrival.
+* **Fixed:**
+  * Contract talk is no longer read as poaching; a commander's plan never targets his own ships; "without a signed contract" is no claim; the classic MILITARY settings list opens every row again; TRADE's HAIL greys out during a channel; a local server error is never blamed on Player2.
+* **Known Issues:** a wing ship given its own patrol is pulled back by its commander after about a minute (fix agreed); after a second "Do it anyway" an officer may deny a running patrol; a lone captain refuses "all ships, attack"; releasing a supply deal by agreement does not go through yet; invented personal details are not remembered; controller use of the hub is untested.
 
 ### 📦 [`v2.9.7-rc.1` — Officers Who Are People](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.7-rc.1) *(Nov 17, 2026)*
 **Thirteen builds on top of 2.9.6 RC1.** **A beta: expect bugs.**
