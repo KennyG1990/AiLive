@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v2.9.5-rc.1` — *Your Own Model, and Accords*
+## 🚀 Latest Release: `v2.9.6-rc.1` — *Small Models, Faithful Orders*
 
-> 📥 **[Download `x4_AiLive-2.9.5.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.5-rc.1)**
+> 📥 **[Download `x4_AiLive-2.9.6.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.6-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `2.9.0`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.95**. Keep a backup of your save: this is a beta build.
+**Upgrading from `2.9.5`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.96**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,19 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v2.9.6-rc.1` — Small Models, Faithful Orders](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.6-rc.1) *(Nov 17, 2026)*
+**Thirteen builds on top of 2.9.5 RC1.** **A beta: expect bugs.**
+
+* **New:**
+  * **Your own model server at 8K context:** each character is told what fits in the room your server has, and every system keeps running (SETTINGS > OTHER > CONNECTION: How much each character is told).
+  * **Orders on your own server are worked out first,** then carried out as worked out or refused - never just promised (How orders are written).
+  * **Doctrine by branch:** command doctrine for everyone, plus the branch of what each officer's ship is doing - combat, supply, extraction, construction or reconnaissance (MILITARY > DOCTRINE).
+  * **Your direct order stands** against a commander's own plan; **"your ships hold"** holds the whole wing; **wing ships answer through the chain**.
+* **Fixed:**
+  * **Accords now found for real** - proposal, petition, the council's sitting and the signature, with no more Accords errors in the log.
+  * On your own server, an officer recites every doctrine tenet even when the briefing is cut to fit.
+* **Known Issues:** on your own server an order passed down the chain ("have Keppel send the Calypso...") is refused - give it to the officer who commands the ship; a small model's speech can be stiff or embellished; controller use of the hub is untested.
 
 ### 📦 [`v2.9.5-rc.1` — Your Own Model, and Accords](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.5-rc.1) *(Nov 16, 2026)*
 **Nineteen builds on top of 2.9.0 RC1.** **A beta: expect bugs.**
