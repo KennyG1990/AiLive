@@ -18,7 +18,7 @@
    * Download the free **Player2** desktop app, sign in, and leave it running in the background while you play.
    * AiLive connects directly to Player2 on `http://127.0.0.1:4315`—**no Python scripts and no API keys required.**
 2. **Download the Mod Package:**
-   * Grab the newest **`x4_AiLive-<version>.zip`** (2.9.6 RC1 at the time of writing) from **[GitHub Releases](https://github.com/KennyG1990/AiLive/releases)**.
+   * Grab the newest **`x4_AiLive-<version>.zip`** (2.9.7 RC1 at the time of writing) from **[GitHub Releases](https://github.com/KennyG1990/AiLive/releases)**.
 3. **Extract into `extensions/`:**
    * Copy the **`x4_ai_influence`** folder from the zip into your `X4 Foundations/extensions/` directory so your layout looks exactly like this:
    ```text
