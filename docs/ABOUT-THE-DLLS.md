@@ -35,7 +35,7 @@ Because a library that reads keys deserves the closest look, here is exactly wha
 
 ### Check the files you downloaded
 
-These are the SHA-256 checksums of the three files in **2.9.6 RC1** (unchanged since 2.8.0 RC2). They change only when a library is rebuilt, and this page is updated when that happens.
+These are the SHA-256 checksums of the three files in **2.9.7 RC1** (unchanged since 2.8.0 RC2). They change only when a library is rebuilt, and this page is updated when that happens.
 
 | File | SHA-256 |
 | :--- | :--- |
