@@ -12,6 +12,11 @@ on:
       tag:
         description: 'Release tag to upload (for example v2.9.0-rc.1)'
         required: true
+      validate_only:
+        description: 'Validate Nexus target without uploading'
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: read
@@ -40,12 +45,127 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
 
+      - name: Resolve and validate Nexus target
+        id: nexus
+        env:
+          NEXUS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
+          CONFIGURED_FILE_ID: ${{ vars.NEXUSMODS_FILE_ID }}
+        run: |
+          python3 <<'PY'
+          import json
+          import os
+          import re
+          import sys
+          import urllib.error
+          import urllib.request
+
+          origin = "https://api.nexusmods.com/v3"
+
+          def fail(message):
+              print(f"Nexus preflight failed: {message}", file=sys.stderr)
+              sys.exit(1)
+
+          api_key = os.environ.get("NEXUS_API_KEY", "").strip()
+          if not api_key:
+              fail("NEXUSMODS_API_KEY is empty or missing; configure the repository secret.")
+
+          configured = os.environ.get("CONFIGURED_FILE_ID", "").strip()
+          if not re.fullmatch(r"[0-9]+", configured):
+              fail("NEXUSMODS_FILE_ID must be a nonempty numeric Nexus file or version ID.")
+          configured_id = int(configured)
+          if configured_id <= 0:
+              fail("NEXUSMODS_FILE_ID must be a positive Nexus file or version ID.")
+
+          def numeric_id(value):
+              if isinstance(value, str) and re.fullmatch(r"[0-9]+", value):
+                  normalized = int(value)
+                  return normalized if normalized > 0 else None
+              if isinstance(value, int) and not isinstance(value, bool) and value > 0:
+                  return value
+              return None
+
+          def get_json(path):
+              request = urllib.request.Request(
+                  origin + path,
+                  headers={"apikey": api_key, "Accept": "application/json"},
+                  method="GET",
+              )
+              try:
+                  with urllib.request.urlopen(request, timeout=30) as response:
+                      payload = json.loads(response.read())
+              except urllib.error.HTTPError as exc:
+                  fail(f"Nexus API returned HTTP {exc.code} for {path}; check the API key and configured IDs.")
+              except (urllib.error.URLError, TimeoutError):
+                  fail(f"Could not reach the Nexus API for {path}; retry after checking network access.")
+              except (json.JSONDecodeError, UnicodeDecodeError):
+                  fail(f"Nexus API returned malformed JSON for {path}.")
+              if not isinstance(payload, dict) or not isinstance(payload.get("data"), dict):
+                  fail(f"Nexus API response for {path} has an unexpected shape.")
+              return payload["data"]
+
+          mod_data = get_json("/games/x4foundations/mods/2600")
+          global_mod_id = numeric_id(mod_data.get("id"))
+          if global_mod_id is None or global_mod_id <= 0:
+              fail("Nexus mod lookup returned an invalid global mod ID.")
+
+          files_data = get_json(f"/mods/{global_mod_id}/files")
+          mod_files = files_data.get("mod_files")
+          if not isinstance(mod_files, list):
+              fail("Nexus mod files response did not contain a mod_files list.")
+          groups = []
+          for item in mod_files:
+              if (
+                  not isinstance(item, dict)
+                  or numeric_id(item.get("id")) is None
+                  or not isinstance(item.get("name"), str)
+                  or not isinstance(item.get("is_active"), bool)
+              ):
+                  fail("Nexus mod files response contains an invalid file group.")
+              groups.append({**item, "id": numeric_id(item["id"])})
+          if len({item["id"] for item in groups}) != len(groups):
+              fail("Nexus mod files response contains duplicate file group IDs.")
+
+          direct_matches = [item for item in groups if item["id"] == configured_id]
+          if len(direct_matches) > 1:
+              fail("Configured ID matches multiple AiLive file groups; resolve the duplicate in Nexus.")
+          if direct_matches:
+              selected = direct_matches[0]
+          else:
+              version_data = get_json(f"/games/x4foundations/mod-file-versions/{configured_id}")
+              file_data = version_data.get("file")
+              group_id = numeric_id(file_data.get("id")) if isinstance(file_data, dict) else None
+              if group_id is None:
+                  fail("Configured version ID did not resolve to a valid Nexus file group.")
+              converted_matches = [item for item in groups if item["id"] == group_id]
+              if len(converted_matches) != 1:
+                  fail("Configured version ID resolves to a file group not uniquely listed under AiLive.")
+              selected = converted_matches[0]
+
+          name = selected.get("name")
+          if not isinstance(name, str) or not name.strip():
+              fail("Selected Nexus file group has no valid name.")
+          active = selected.get("is_active")
+          if not isinstance(active, bool):
+              fail("Selected Nexus file group has an invalid is_active value.")
+
+          available = "; ".join(
+              f"{item['id']}:{item.get('name', '<unnamed>')}:{str(item.get('is_active', '<unknown>')).lower()}"
+              for item in groups
+          )
+          print(f"AiLive file groups (id:name:is_active): {available}")
+          print(f"Validated Nexus target: mod_id={global_mod_id}, file_id={selected['id']}, name={name}, is_active={str(active).lower()}")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(f"mod_id={global_mod_id}\n")
+              output.write(f"file_id={selected['id']}\n")
+          PY
+
       - name: Upload to Nexus Mods
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.validate_only != true }}
         uses: Nexus-Mods/upload-action@v1.0.0-beta.11
         with:
           api_key: ${{ secrets.NEXUSMODS_API_KEY }}
-          file_id: ${{ vars.NEXUSMODS_FILE_ID }}
-          mod_id: 2600
+          file_id: ${{ steps.nexus.outputs.file_id }}
+          mod_id: ${{ steps.nexus.outputs.mod_id }}
           filename: mod.zip
           version: ${{ steps.meta.outputs.version }}
           display_name: AiLive ${{ steps.meta.outputs.version }}
