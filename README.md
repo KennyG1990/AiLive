@@ -34,7 +34,7 @@ Hail any captain, station manager, or faction liaison—face-to-face on the dock
 * 🤥 **Caught in a Lie:** Bluff about a relief fleet that isn't coming or double-cross a trading partner—when the truth comes out, watch their trust evaporate and their tone turn icy.
 * 🎲 **Persuade, Threaten, Deceive — Then the Dice Decide:** Push a reluctant officer or a stubborn manager with a real attempt. Who they are, what they owe you and what you can prove all shift the odds—then the dice judge it. No guaranteed wins, no rigged losses.
 * 📎 **Throw Their Own Words Back at Them:** Every promise, refusal, threat and favour lands on the record. Click a line of **Leverage** to hold someone to what they actually said and did—*"verified by her own records."*
-* 🧾 **They Know What They're Facing:** A station starved of hull parts, a realm at war, a treasury running dry—what the other side is really up against sways the deal, and you see it right under the odds. *(Arrives in the next release.)*
+* 🧾 **They Know What They're Facing:** A station starved of hull parts, a realm at war, a treasury running dry—what the other side is really up against sways the deal, and you see it right under the odds.
 
 ---
 
@@ -89,7 +89,7 @@ Why glass a sector with plasma when you can make it kneel through leverage, indu
 Your empire doesn't run on menus. It runs on people you trust.
 * 🏛️ **Appoint Governors in Conversation:** Name a station manager governor of a sector, in your own words. They review their sectors on their own schedule, re-task civilian ships, ask for security when they need it, and report back.
 * 🏭 **Managers Who Know the Books:** Your own station managers report on their stations and quote the accounts—and never send you a bill for doing their jobs.
-* 🔧 **Station Rounds:** The **GOVERNMENT** board lists what each of your stations needs—a manager, cargo drones, money for production, an input about to run out—judged exactly as the game itself judges it. *(Arrives in the next release.)*
+* 🔧 **Station Rounds:** The **GOVERNMENT** board lists what each of your stations needs—a manager, cargo drones, money for production, an input about to run out—judged exactly as the game itself judges it.
 * 💳 **Your Account on Record:** Officers can quote your ledger, and trades made on your orders come back with a receipt.
 
 ---
@@ -157,7 +157,7 @@ AiLive is built on one ironclad rule: **No Magic. No Cheating.**
 | Section | What You'll Find Inside |
 | :--- | :--- |
 | 🚀 **[Download Latest Release](https://github.com/KennyG1990/AiLive/releases)** | Grab the ready-to-install `x4_AiLive` zip archive from GitHub Releases. |
-| 📦 **[Releases & Changelog](docs/RELEASES.md)** | Version-by-version release history (`v2.9.0 RC1` down to `v2.0.1`), upgrade notes, and save-safety fixes. |
+| 📦 **[Releases & Changelog](docs/RELEASES.md)** | Version-by-version release history (`v2.9.6 RC1` down to `v2.0.1`), upgrade notes, and save-safety fixes. |
 | 📖 **[Player Guide](docs/PLAYER-GUIDE.md)** | 2-minute installation, Player2 setup, and a hands-on guide to your first 15 minutes in game. |
 | 📚 **[Read Docs (Field Manual)](docs/READ-DOCS.md)** | Chat commands (`whereis`, `range`, `/raw`), Hub tabs, the 7 Naval Ranks, and all 22+ Honours & Ribbons. |
 | 🛠️ **[Under the Hood](docs/UNDER-THE-HOOD.md)** | How AiLive works inside X4: deterministic guardrails, person-level secret ledgers, AARs, and 90+ automated test gates. |

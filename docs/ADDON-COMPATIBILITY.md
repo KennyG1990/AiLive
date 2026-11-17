@@ -2,9 +2,9 @@
 
 For authors of add-ons that run beside AiLive. We post here **before** a release when something an add-on touches is going to change, so you can adjust in time. Watch this file (or the repository) to be told when it changes; the commit history is the change log.
 
-Last updated: 13 Nov 2026.
+Last updated: 17 Nov 2026.
 
-- [1. Current release and your contact points](#1-current-release-ailive-280-rc1)
+- [1. Current release and your contact points](#1-current-release-ailive-296-rc1)
 - [2. Advance notice: planned changes](#2-advance-notice-planned-changes)
 - [3. The add-on interface, version 1](#3-the-add-on-interface-version-1)
 - [4. Requests we have received](#4-requests-we-have-received)
@@ -12,7 +12,24 @@ Last updated: 13 Nov 2026.
 
 ---
 
-## 1. Current release: AiLive 2.8.0 RC1
+## 1. Current release: AiLive 2.9.6 RC1
+
+Released 17 Nov 2026, build `#1110b691`.
+
+We checked every contact point on the AiLive Voice list against the 2.9.6 release files, the same way as for 2.8.0.
+
+**Result: every function, table, event, MD reference and prompt marker on that list is still present in 2.9.6, with the same name and the same arguments.** Nothing was removed or renamed. `ActiveBackend`, `SendDirect`, the receipt prompts, `OrderFailuresRead`, `PlayerDoctrineAdd` and `RankEffective` are unchanged byte for byte.
+
+### What changed in 2.9.0 to 2.9.6 that may affect an add-on
+
+1. **`SendDirectChat(ctx, text, onReply)` grew again** (about 2%). Same arguments. A wrapper that calls the original should hold.
+2. **Your own model server** (2.9.5). SETTINGS > OTHER > CONNECTION > Conversation service is PLAYER2 or YOUR OWN SERVER. With Player2 the request bodies are exactly what AiLive wrote, as before. With YOUR OWN SERVER a request is reshaped for that server: on a small (8K) server the briefing is shortened to fit, and a direct order to an officer is worked out in one short extra request before the reply. An add-on that reads or rewrites prompts should check which service is active (`ActiveBackend()`).
+3. **Doctrine by branch** (2.9.6). The FLEET DOCTRINE block in an own officer's prompt now carries the command doctrine plus the officer's branch only, and may end with one line naming the branch. `PlayerDoctrineAdd` and `_docs.player` are unchanged. Off: SETTINGS > MILITARY > DOCTRINE > Doctrine by branch.
+4. **Accords** (2.9.5, founding fixed in 2.9.6). A new POWER > ACCORDS screen and council outcomes for common-defence Accords; their notices use the existing message paths.
+
+---
+
+## Earlier release: AiLive 2.8.0 RC1
 
 Released 13 Nov 2026, build `#1110b646`.
 
@@ -69,7 +86,7 @@ Nothing in this section is released. Dates are not promised. We update each item
 
 | Planned change | What it will touch | Status |
 | --- | --- | --- |
-| **The add-on interface, version 1** (section 3) | New file `aic_addon.lua`; headers on model requests when an add-on asks; two Lua events | **Built, ships in the next build after 2.7.0 RC1** |
+| **The add-on interface, version 1** (section 3) | New file `aic_addon.lua`; headers on model requests when an add-on asks; two Lua events | **Shipped in 2.8.0 RC1** |
 | **An officer who cannot help names who can.** A refusal for want of authority will carry a referral and an offer to pass the order on. | The refusal text and the reply's `refuse` field; the text near the chain-of-command rule in own-officer prompts | Specified, not started |
 | **An aide.** One person the player can tell anything, who routes it to the right officer. | A new staff post in the officer registry; a new HAIL entry in the hub | Specified, not started |
 | **Suggested lines built from what the officer can really do.** The three opening choices and one of the three after each reply will be computed from the officer's post. | The choices shown in the conversation window; a full order becomes possible without typing | Specified, not started |
@@ -79,7 +96,7 @@ Nothing in this section is released. Dates are not promised. We update each item
 
 ## 3. The add-on interface, version 1
 
-**Built 11 Nov 2026. Not yet released.** It ships in the next AiLive build after 2.7.0 RC1. It has passed our automated checks and a live request to Player2 with the new headers; it has not yet been run inside the game. Treat this as the plan of record and tell us if something does not fit.
+**Shipped in 2.8.0 RC1 (13 Nov 2026), unchanged through 2.9.6 RC1.** It passed our automated checks and a live request to Player2 with the new headers. Tell us if something does not fit.
 
 It is read-only: it labels model requests and announces two moments. It changes no prompt, no order, no money and no dice.
 

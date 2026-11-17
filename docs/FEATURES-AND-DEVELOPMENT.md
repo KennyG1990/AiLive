@@ -31,7 +31,9 @@ A faction council decides it wants peace. A fighter undocks with the proposal. T
 
 ---
 
-## ✅ 2. Current Feature Inventory (`v2.1.0` → `v2.4.0-rc.1`)
+## ✅ 2. Feature Inventory as of `v2.4.0-rc.1` (OLD)
+
+> **OLD:** this inventory stops at `v2.4.0-rc.1`. Everything added since, up to `v2.9.6-rc.1`, is listed release by release in [RELEASES.md](RELEASES.md).
 
 | Domain | Proven in Live Game Sessions | Built & Gate-Tested (Awaiting Live Triggers) |
 | :--- | :--- | :--- |
