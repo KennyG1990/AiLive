@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v2.9.6-rc.1` — *Small Models, Faithful Orders*
+## 🚀 Latest Release: `v2.9.7-rc.1` — *Officers Who Are People*
 
-> 📥 **[Download `x4_AiLive-2.9.6.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.6-rc.1)**
+> 📥 **[Download `x4_AiLive-2.9.7.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.7-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `2.9.5`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.96**. Keep a backup of your save: this is a beta build.
+**Upgrading from `2.9.6`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.97**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,20 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v2.9.7-rc.1` — Officers Who Are People](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.7-rc.1) *(Nov 17, 2026)*
+**Thirteen builds on top of 2.9.6 RC1.** **A beta: expect bugs.**
+
+* **New:**
+  * **Talk to your officers as people:** ask about their life, family or home, or invite them to dinner, and they answer as themselves; they serve your own private fleet, never a navy or an empire.
+  * **Governors know their stations** from the day they are appointed and answer from today's readings, saying what each station needs (ECONOMIC > GOVERNORS: Station reports, Station watch).
+  * **A lone captain really withdraws** when told to; resupply is asked for only once the withdrawal is under way.
+  * **On your own server, the briefing follows your question:** the fleet's facts for a fleet question, the officer's character for a personal one, the matching entries from long lists (OTHER > CONNECTION: How much each character is told).
+* **Fixed:**
+  * On your own server, an order passed down the chain is carried out (a 2.9.6 known issue).
+  * Secrets stay secret in long memory; what you told an officer is remembered as your claim; recall stays quiet when nothing fits.
+  * No false "Not done" on a relayed hand-off; a governor's first answer comes from his readings.
+* **Known Issues:** a lone captain refuses "all ships, attack" when he commands only his own ship; releasing a supply deal by agreement does not go through yet; personal details an officer invents are not remembered yet; a small model can muddle numbers; controller use of the hub is untested.
 
 ### 📦 [`v2.9.6-rc.1` — Small Models, Faithful Orders](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.6-rc.1) *(Nov 17, 2026)*
 **Thirteen builds on top of 2.9.5 RC1.** **A beta: expect bugs.**
