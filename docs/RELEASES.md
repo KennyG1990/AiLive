@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v2.9.8-rc.1` — *Orders With a Spine*
+## 🚀 Latest Release: `v2.9.9-rc.1` — *Pick Your Own Models*
 
-> 📥 **[Download `x4_AiLive-2.9.8.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.8-rc.1)**
+> 📥 **[Download `x4_AiLive-2.9.9.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.9-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `2.9.7`:** replace the whole `x4_ai_influence` folder, then **load your save** (not just a UI reload). The extension list shows **2.98**. Keep a backup of your save: this is a beta build.
+**Upgrading from `2.9.8`:** replace the whole `x4_ai_influence` folder, then **restart X4** and load your save (a DLL changed). The extension list shows **2.99**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,19 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v2.9.9-rc.1` — Pick Your Own Models](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.9-rc.1) *(Nov 18, 2026)*
+**Twelve builds on top of 2.9.8 RC1.** **A beta: expect bugs.**
+
+* **New:**
+  * **OpenRouter as a conversation service** (OTHER > CONNECTION): any OpenRouter model can voice the characters; the key is saved from the clipboard and kept encrypted by Windows, never in your save; the page shows what the last hour cost.
+  * **Pick models in game:** REFRESH MODELS lists OpenRouter's text models by cost, reply-format fit, thinking and role-play.
+  * **A model for each part of the game** (OTHER > MODELS): talk, officers, leaders, combat, command, strategy, government, economy, intelligence, careers, story and upkeep each take their own model, or the default; per-layer cost; CLEAR ALL LAYERS.
+  * **How hard each layer thinks:** AUTO / LOW / MEDIUM / HIGH per layer.
+  * **Reasoning models get room to think,** so a council decision is not cut off half-written.
+  * **A wing ship you send alone leaves the wing** for that task; "take your wing" keeps it together.
+* **Fixed:** a named attack can no longer become another ship's flight (seen in play); gate-tested: sparing a named faction in an attack, a courier keeping your later standing order, the report after a second "Do it anyway", dashes in contract talk, code examples in your message.
+* **Known Issues:** an officer can still say she gave an order when none went out (the record line is right); the ORDERS layer's model is not used yet; a FREE OpenRouter model's rate limit pauses OpenRouter for every layer; a lone captain refuses "all ships, attack"; releasing a supply deal by agreement does not go through yet; invented personal details are not remembered; controller use of the hub is untested.
 
 ### 📦 [`v2.9.8-rc.1` — Orders With a Spine](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.8-rc.1) *(Nov 17, 2026)*
 **Twelve builds on top of 2.9.7 RC1.** **A beta: expect bugs.**
