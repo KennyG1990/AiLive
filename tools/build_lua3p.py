@@ -59,12 +59,13 @@ def copyright_notices(path):
     return '\n\n'.join(notices)
 
 
-def module_commands(inc, socket_src, cjson_src, aickeys_src, link_flags):
+def module_commands(inc, socket_src, cjson_src, aickeys_src, link_flags, aicnet_src=None):
     """Arguments go through response files, never shell interpolation."""
     return {
+        # OPENROUTER-1: the first-party HTTPS module (native/aicnet/aicnet.c, WinHTTP + DPAPI) shares core.dll with LuaSocket
         'core': CL_FLAGS + ['/I' + inc, '/I' + socket_src, '/Fe:core.dll', '/LD']
-                + [os.path.join(socket_src, c) for c in SOCKET_SRC]
-                + ['/link'] + link_flags + ['lua51_64.lib', 'ws2_32.lib'],
+                + [os.path.join(socket_src, c) for c in SOCKET_SRC] + ([aicnet_src] if aicnet_src else [])
+                + ['/link'] + link_flags + ['lua51_64.lib', 'ws2_32.lib'] + (['winhttp.lib', 'crypt32.lib', 'user32.lib'] if aicnet_src else []),
         'cjson': CJSON_FLAGS + ['/I' + inc, '/I' + cjson_src, '/Fe:cjson.dll', '/LD']
                  + [os.path.join(cjson_src, c) for c in CJSON_SRC]
                  + ['/link'] + link_flags + ['lua51_64.lib'],
@@ -226,6 +227,9 @@ def main():
     aickeys_source = Path(work, 'aickeys.c')
     shutil.copyfile(aickeys_original, aickeys_source)
     aickeys_sha = hashlib.sha256(aickeys_source.read_bytes()).hexdigest()
+    aicnet_source = Path(work, 'aicnet.c')   # OPENROUTER-1 first-party HTTPS module, frozen the same way
+    shutil.copyfile(Path(ROOT, 'native', 'aicnet', 'aicnet.c'), aicnet_source)
+    aicnet_sha = hashlib.sha256(aicnet_source.read_bytes()).hexdigest()
     inc = os.path.join(work, 'i'); os.makedirs(inc)
     for h in ('lua.h', 'luaconf.h', 'lauxlib.h', 'lualib.h'):
         shutil.copy(os.path.join(lj_dir, 'src', h), inc)
@@ -239,7 +243,7 @@ def main():
 
     src = os.path.join(ls_dir, 'src')
     link_flags = LINK_FLAGS + ([] if a.no_brepro else ['/Brepro'])
-    commands = module_commands(inc, src, cj_dir, str(aickeys_source), link_flags)
+    commands = module_commands(inc, src, cj_dir, str(aickeys_source), link_flags, str(aicnet_source))
     for module, compile_args in commands.items():
         with open(os.path.join(work, module + '.rsp'), 'w', encoding='utf-8') as f:
             # cl's /link consumes the rest of this LINE; newlines send options back to cl.
@@ -318,6 +322,14 @@ def main():
                 'No live keyboard polling is performed by this build. Defender custom-file scan: NOT RUN by the builder; '
                 'the handoff must record the scan result and exact aickeys.dll hash before release-candidate acceptance.\n\n'
                 % aickeys_sha)
+        f.write('## aicnet (inside luasocket/core.dll)\n\nFirst-party source: `native/aicnet/aicnet.c` SHA256 `%s`, compiled into '
+                'core.dll beside the unmodified LuaSocket sources and linked to Windows winhttp.lib and crypt32.lib. HTTPS requests '
+                'run on a worker thread through Windows WinHTTP (system TLS 1.2+ and certificate store; certificate errors are never '
+                'ignored). API keys are protected with Windows DPAPI for the current user in %%LOCALAPPDATA%%\\AiLive\\keys, bound to '
+                'one host, never stored in a save and never returned to Lua; the DLL adds the Authorization header itself, '
+                'only over HTTPS, only to that host, with redirects refused. A key can be saved straight from the Windows '
+                'clipboard on the player\'s press (user32.lib; the clipboard is emptied afterwards), so it is never typed or shown.\n\n'
+                % aicnet_sha)
         f.write('## Toolchain and exact build commands\n\nCompiler: %s\n\nLinker: %s\n\n'
                 'Environment:\n```text\n%s\n```\n\n' % (compiler, linker, environment))
         f.write('```bat\ncall "%s" %s -vcvars_ver=%s\n'
