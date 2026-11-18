@@ -30,6 +30,10 @@ OpenResty lua-cjson 2.1.0.19, no C patches. Sources: lua_cjson.c, strbuf.c, g_fm
 
 First-party foreground-only allowlisted key polling; no retained state or hooks. No live keyboard polling is performed by this build. Defender custom-file scan: NOT RUN by the builder; the handoff must record the scan result and exact aickeys.dll hash before release-candidate acceptance.
 
+## aicnet (inside luasocket/core.dll)
+
+First-party source: `native/aicnet/aicnet.c` SHA256 `638a5268db7272b493002eba47215e645b73c340214454dd6ff6146fb066f352`, compiled into core.dll beside the unmodified LuaSocket sources and linked to Windows winhttp.lib and crypt32.lib. HTTPS requests run on a worker thread through Windows WinHTTP (system TLS 1.2+ and certificate store; certificate errors are never ignored). API keys are protected with Windows DPAPI for the current user in %LOCALAPPDATA%\AiLive\keys, bound to one host, never stored in a save and never returned to Lua; the DLL adds the Authorization header itself, only over HTTPS, only to that host, with redirects refused. A key can be saved straight from the Windows clipboard on the player's press (user32.lib; the clipboard is emptied afterwards), so it is never typed or shown.
+
 ## Toolchain and exact build commands
 
 Compiler: Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
@@ -46,9 +50,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.
 ```bat
 call "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat" 10.0.26100.0 -vcvars_ver=14.44
 lib /nologo /def:lua51_64.def /machine:x64 /out:lua51_64.lib
-cl /nologo /O2 /Ot /MT /W3 /DWIN32 /DNDEBUG /D_WINDOWS /D_USRDLL /D_CRT_SECURE_NO_WARNINGS /D_WINDLL /DLUASOCKET_NODEBUG /DLUASOCKET_API=__declspec(dllexport) /IC:\aicb\wc06zqvd5\i /IC:\aicb\wc06zqvd5\a\s\src /Fe:core.dll /LD C:\aicb\wc06zqvd5\a\s\src\luasocket.c C:\aicb\wc06zqvd5\a\s\src\timeout.c C:\aicb\wc06zqvd5\a\s\src\buffer.c C:\aicb\wc06zqvd5\a\s\src\io.c C:\aicb\wc06zqvd5\a\s\src\auxiliar.c C:\aicb\wc06zqvd5\a\s\src\compat.c C:\aicb\wc06zqvd5\a\s\src\options.c C:\aicb\wc06zqvd5\a\s\src\inet.c C:\aicb\wc06zqvd5\a\s\src\wsocket.c C:\aicb\wc06zqvd5\a\s\src\except.c C:\aicb\wc06zqvd5\a\s\src\select.c C:\aicb\wc06zqvd5\a\s\src\tcp.c C:\aicb\wc06zqvd5\a\s\src\udp.c /link /NOLOGO /DLL /INCREMENTAL:NO /OPT:REF /OPT:ICF /Brepro lua51_64.lib ws2_32.lib
-cl /nologo /O2 /MT /W3 /DUSE_INTERNAL_FPCONV /DNDEBUG /D_CRT_SECURE_NO_WARNINGS /DCJSON_VERSION=\"2.1.0.19\" /IC:\aicb\wc06zqvd5\i /IC:\aicb\wc06zqvd5\c\s /Fe:cjson.dll /LD C:\aicb\wc06zqvd5\c\s\lua_cjson.c C:\aicb\wc06zqvd5\c\s\strbuf.c C:\aicb\wc06zqvd5\c\s\g_fmt.c C:\aicb\wc06zqvd5\c\s\dtoa.c /link /NOLOGO /DLL /INCREMENTAL:NO /OPT:REF /OPT:ICF /Brepro lua51_64.lib
-cl /nologo /O2 /MT /W4 /WX /DWIN32 /DNDEBUG /D_WINDOWS /D_USRDLL /D_WINDLL /IC:\aicb\wc06zqvd5\i /Fe:aickeys.dll /LD C:\aicb\wc06zqvd5\aickeys.c /link /NOLOGO /DLL /INCREMENTAL:NO /OPT:REF /OPT:ICF /Brepro lua51_64.lib user32.lib
+cl /nologo /O2 /Ot /MT /W3 /DWIN32 /DNDEBUG /D_WINDOWS /D_USRDLL /D_CRT_SECURE_NO_WARNINGS /D_WINDLL /DLUASOCKET_NODEBUG /DLUASOCKET_API=__declspec(dllexport) /I<work>\i /I<work>\a\s\src /Fe:core.dll /LD <work>\a\s\src\luasocket.c <work>\a\s\src\timeout.c <work>\a\s\src\buffer.c <work>\a\s\src\io.c <work>\a\s\src\auxiliar.c <work>\a\s\src\compat.c <work>\a\s\src\options.c <work>\a\s\src\inet.c <work>\a\s\src\wsocket.c <work>\a\s\src\except.c <work>\a\s\src\select.c <work>\a\s\src\tcp.c <work>\a\s\src\udp.c <work>\aicnet.c /link /NOLOGO /DLL /INCREMENTAL:NO /OPT:REF /OPT:ICF /Brepro lua51_64.lib ws2_32.lib winhttp.lib crypt32.lib user32.lib
+cl /nologo /O2 /MT /W3 /DUSE_INTERNAL_FPCONV /DNDEBUG /D_CRT_SECURE_NO_WARNINGS /DCJSON_VERSION=\"2.1.0.19\" /I<work>\i /I<work>\c\s /Fe:cjson.dll /LD <work>\c\s\lua_cjson.c <work>\c\s\strbuf.c <work>\c\s\g_fmt.c <work>\c\s\dtoa.c /link /NOLOGO /DLL /INCREMENTAL:NO /OPT:REF /OPT:ICF /Brepro lua51_64.lib
+cl /nologo /O2 /MT /W4 /WX /DWIN32 /DNDEBUG /D_WINDOWS /D_USRDLL /D_WINDLL /I<work>\i /Fe:aickeys.dll /LD <work>\aickeys.c /link /NOLOGO /DLL /INCREMENTAL:NO /OPT:REF /OPT:ICF /Brepro lua51_64.lib user32.lib
 ```
 
 The commands are passed via core.rsp, cjson.rsp and aickeys.rsp to avoid command-line length limits. Ambient CL, _CL_, LINK and _LINK_ variables are removed from the compiler subprocess environment. /MT statically links the C runtime; /Brepro is an optional linker determinism attempt, not a promise of identical outputs across different compilers or inputs.
@@ -64,17 +68,7 @@ The commands are passed via core.rsp, cjson.rsp and aickeys.rsp to avoid command
 | aickeys/aickeys.dll | `449931735c7d2c719d085b03a4e90a0cf9b88d5da6aa457ae20f4ac29d68caf7` |
 | cjson/cjson.dll | `75cde82d74d0d2f350bd0fee30bbf5971787d11f5b657a9381ab946132a11051` |
 | json.lua | `0eaccda57fabc0330736de25f45cf589821a42b5e0fe02e4e3125f7dc0bf2b7e` |
-| luasocket/core.dll | `b0ad8ab91f4ba40ca0cbb6fe11207a91b4b853f44b7515e1ec5c1c5f52269b9f` |
+| luasocket/core.dll | `71a5130abe786cae978e602f2436f6acfabda9cb8f9c13896f781f9dc9e4121f` |
 | luasocket/socket.lua | `a92ae132ce092dc5b8e164ccbc7c737f987b8bbbd481b531db9b64d6c2be4e11` |
 
 BUILD.md is excluded from its own hash table. Static validation and in-game acceptance are separate; a successful compile alone does not establish compatibility in X4.
-
-## Post-build Defender scan for this handoff
-
-- Finished UTC: 2026-10-26T11:16:14.934603+00:00
-- File: aickeys/aickeys.dll SHA256 `449931735c7d2c719d085b03a4e90a0cf9b88d5da6aa457ae20f4ac29d68caf7`
-- Scanner: Microsoft Defender 4.18.26090.9-0; signatures 1.461.208.0
-- Command: `MpCmdRun.exe -Scan -ScanType 3 -File <staged aickeys.dll> -DisableRemediation`
-- Exit code: 0. Output explicitly reported "found no threats"; file hash unchanged.
-- Scope: this file and these signatures only; not game validation or a guarantee of all future scanners. Re-scan the release-candidate bytes before each release candidate, as SPEC-854 requires.
-- Full receipt: C:/aicb/854-20261026/evidence/defender-scan.json
