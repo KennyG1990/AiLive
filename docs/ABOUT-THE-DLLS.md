@@ -4,7 +4,7 @@ AiLive ships three small Windows libraries (DLLs). People ask about them, and th
 
 ## Why a mod for X4 needs DLLs at all
 
-X4 runs mod scripts in a sandbox that has no way to open a network connection. AiLive's characters think through the **Player2** app running on your own computer, so the game has to be able to talk to that app. The only way to give X4's scripts a network connection is to load a small native library. That is the whole reason these files exist.
+X4 runs mod scripts in a sandbox that has no way to open a network connection. AiLive's characters think through the **Player2** app running on your own computer, your own model server, or **OpenRouter** if you choose it, so the game has to be able to talk to them. The only way to give X4's scripts a network connection is to load a small native library. That is the whole reason these files exist.
 
 Without them the mod still loads and the hub still opens, but nobody ever answers you.
 
@@ -14,9 +14,18 @@ Without them the mod still loads and the hub still opens, but nobody ever answer
 
 | File | What it is | What it does in AiLive |
 | :--- | :--- | :--- |
-| `lua3p/luasocket/core.dll` | **LuaSocket 3.1.0**, a widely used open-source networking library (MIT licence). Not written by us. (It reports itself as "LuaSocket 3.0.0" in the game's log; the 3.1.0 release kept the old version text in its source.) | Lets the game send a request to the Player2 app on your own machine (`127.0.0.1:4315`) and read the reply. If you point AiLive at another service yourself in its settings (a local Ollama or KoboldCpp, for example), it talks to that address instead. It connects to nothing you have not set. |
+| `lua3p/luasocket/core.dll` | **LuaSocket 3.1.0**, a widely used open-source networking library (MIT licence), not written by us, **plus since 2.9.9 our own small HTTPS module** compiled into the same file: [`native/aicnet/aicnet.c`](../native/aicnet/aicnet.c). (LuaSocket reports itself as "LuaSocket 3.0.0" in the game's log; the 3.1.0 release kept the old version text in its source.) | Lets the game send a request to the Player2 app on your own machine (`127.0.0.1:4315`) and read the reply. If you point AiLive at another service yourself in its settings (a local Ollama or KoboldCpp, for example), it talks to that address instead. If you choose OPENROUTER, the HTTPS module sends the requests to openrouter.ai and keeps your OpenRouter key safe (see below). It connects to nothing you have not set. |
 | `lua3p/cjson/cjson.dll` | **lua-cjson 2.1.0.19** from OpenResty, an open-source JSON reader and writer (MIT licence). Not written by us. | Packs and unpacks the mod's own saved records quickly. It has no network or file access of its own. |
 | `lua3p/aickeys/aickeys.dll` | **Our own**, 58 lines of C. The full source is in this repository: [`native/aickeys/aickeys.c`](../native/aickeys/aickeys.c). | Makes the hub hotkeys work (`CTRL+SHIFT+U` and the others). X4 gives mods no way to read a key combination, so this asks Windows "is this key down right now?" |
+
+### What the HTTPS module does and does not do
+
+It exists for OpenRouter, which only answers over HTTPS. Its source is public: [`native/aicnet/aicnet.c`](../native/aicnet/aicnet.c).
+
+- It speaks **HTTPS only**, through Windows' own WinHTTP and the Windows certificate store (TLS 1.2 or newer). Certificate errors are never ignored, and redirects are refused.
+- **Your OpenRouter key** is saved only when you press SAVE KEY FROM CLIPBOARD. Windows encrypts it for your user account (DPAPI) in `%LOCALAPPDATA%\AiLive\keys`. It is bound to openrouter.ai, sent to no other address, never written to your save, never handed to the game's scripts and never shown. The module adds it to a request itself.
+- It reads the clipboard **only when you press that button**, and empties it afterwards. FORGET KEY deletes the saved key, and says so if it could not.
+- It sends nothing on its own: every request is one the mod's settings asked for.
 
 ### What the hotkey reader does and does not do
 
@@ -28,18 +37,18 @@ Because a library that reads keys deserves the closest look, here is exactly wha
 
 ## You do not have to take our word for it
 
-- **The source is public.** LuaSocket: <https://github.com/lunarmodules/luasocket>. lua-cjson: <https://github.com/openresty/lua-cjson>. Our hotkey reader: [`native/aickeys/aickeys.c`](../native/aickeys/aickeys.c).
+- **The source is public.** LuaSocket: <https://github.com/lunarmodules/luasocket>. lua-cjson: <https://github.com/openresty/lua-cjson>. Our hotkey reader: [`native/aickeys/aickeys.c`](../native/aickeys/aickeys.c). Our HTTPS module: [`native/aicnet/aicnet.c`](../native/aicnet/aicnet.c).
 - **The build is written down.** [`lua3p/BUILD.md`](../lua3p/BUILD.md) lists the exact upstream commits, the checksum of every download, the compiler and the commands. [`tools/build_lua3p.py`](../tools/build_lua3p.py) is the script that builds all three from those sources; it uses only Python's standard library and never runs a downloaded program. Anyone with Microsoft's free build tools can rebuild the files and compare.
 - **The licences ship with the mod**, in the `lua3p` folder.
 - **The files are free**, like the rest of the mod.
 
 ### Check the files you downloaded
 
-These are the SHA-256 checksums of the three files in **2.9.8 RC1** (unchanged since 2.8.0 RC2). They change only when a library is rebuilt, and this page is updated when that happens.
+These are the SHA-256 checksums of the three files in **2.9.9 RC1**. `core.dll` was rebuilt in 2.9.9 to add the HTTPS module; the other two are unchanged since 2.8.0 RC2. They change only when a library is rebuilt, and this page is updated when that happens. Windows Defender scans of all three found no threats (18 Nov 2026).
 
 | File | SHA-256 |
 | :--- | :--- |
-| `lua3p/luasocket/core.dll` | `b0ad8ab91f4ba40ca0cbb6fe11207a91b4b853f44b7515e1ec5c1c5f52269b9f` |
+| `lua3p/luasocket/core.dll` | `71a5130abe786cae978e602f2436f6acfabda9cb8f9c13896f781f9dc9e4121f` |
 | `lua3p/cjson/cjson.dll` | `75cde82d74d0d2f350bd0fee30bbf5971787d11f5b657a9381ab946132a11051` |
 | `lua3p/aickeys/aickeys.dll` | `449931735c7d2c719d085b03a4e90a0cf9b88d5da6aa457ae20f4ac29d68caf7` |
 
