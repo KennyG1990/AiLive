@@ -12,15 +12,15 @@ Last updated: 17 Nov 2026.
 
 ---
 
-## 1. Current release: AiLive 2.9.8 RC1
+## 1. Current release: AiLive 2.9.9 RC1
 
 Released 17 Nov 2026, build `#1110b691`.
 
-We checked every contact point on the AiLive Voice list against the 2.9.8 release files, the same way as for 2.8.0, 2.9.6 and 2.9.7.
+We checked every contact point on the AiLive Voice list against the 2.9.9 release files, the same way as for 2.8.0, 2.9.6, 2.9.7 and 2.9.8.
 
-**Result: every function, table, event, MD reference and prompt marker on that list is still present in 2.9.8, with the same name and the same arguments.** Nothing was removed or renamed. `ActiveBackend`, `SendDirect`, the receipt prompts, `OrderFailuresRead`, `PlayerDoctrineAdd` and `RankEffective` are unchanged byte for byte.
+**Result: every function, table, event, MD reference and prompt marker on that list is still present in 2.9.9, with the same name.** Nothing was removed or renamed. One function gained an argument: `ActiveBackend(opts)` (see 7 below). `SendDirect`, the receipt prompts, `OrderFailuresRead`, `PlayerDoctrineAdd` and `RankEffective` are unchanged byte for byte.
 
-### What changed in 2.9.0 to 2.9.8 that may affect an add-on
+### What changed in 2.9.0 to 2.9.9 that may affect an add-on
 
 1. **`SendDirectChat(ctx, text, onReply)` grew again** (about 2%). Same arguments. A wrapper that calls the original should hold.
 2. **Your own model server** (2.9.5). SETTINGS > OTHER > CONNECTION > Conversation service is PLAYER2 or YOUR OWN SERVER. With Player2 the request bodies are exactly what AiLive wrote, as before. With YOUR OWN SERVER a request is reshaped for that server: on a small (8K) server the briefing is shortened to fit, and a direct order to an officer is worked out in one short extra request before the reply. An add-on that reads or rewrites prompts should check which service is active (`ActiveBackend()`).
@@ -28,6 +28,8 @@ We checked every contact point on the AiLive Voice list against the 2.9.8 releas
 5. **Personal talk** (2.9.7). When the player asks one of his own officers about their life, a short bracketed note beginning `[ABOUT YOU:` is added at the end of the player's message; it is never added to an order. An add-on that reads the player's words from the request should read up to the first bracketed note.
 6. **Long memory** (2.9.7). `SendDirectChat` passes the officer's trust tier to the history search, so archived memories above that tier are withheld; its arguments are unchanged.
 4. **Accords** (2.9.5, founding fixed in 2.9.6). A new POWER > ACCORDS screen and council outcomes for common-defence Accords; their notices use the existing message paths.
+7. **OpenRouter and a model per layer** (2.9.9). Conversation service can now be OPENROUTER. `ActiveBackend(opts)` takes an optional `opts` table: `SendDirect` passes its own opts so the backend can pick the model for that call's layer (talk, strategy, story and so on). A wrapper should pass its arguments through (`function(...) return orig(...) end`); a wrapper that drops them still works, and every call then uses the default model. With OPENROUTER the request body also carries `usage`, and for a reasoning model a `reasoning` field and a larger `max_tokens`. The OpenRouter key never appears in a request an add-on can see: `core.dll` adds it itself. With Player2 nothing changes.
+8. **`AIC_HTTP` requests to `https://` addresses** (2.9.9) go through the new HTTPS module in `core.dll`; `http://` requests are unchanged.
 
 ---
 
@@ -98,7 +100,7 @@ Nothing in this section is released. Dates are not promised. We update each item
 
 ## 3. The add-on interface, version 1
 
-**Shipped in 2.8.0 RC1 (13 Nov 2026), unchanged through 2.9.8 RC1.** It passed our automated checks and a live request to Player2 with the new headers. Tell us if something does not fit.
+**Shipped in 2.8.0 RC1 (13 Nov 2026), unchanged through 2.9.9 RC1.** It passed our automated checks and a live request to Player2 with the new headers. Tell us if something does not fit.
 
 It is read-only: it labels model requests and announces two moments. It changes no prompt, no order, no money and no dice.
 
