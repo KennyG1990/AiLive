@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v2.9.9-rc.1` — *Pick Your Own Models*
+## 🚀 Latest Release: `v3.0.2-rc.1` — *Where Things Stand, and Warships for Sale*
 
-> 📥 **[Download `x4_AiLive-2.9.9.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.9-rc.1)**
+> 📥 **[Download `x4_AiLive-3.0.2.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.2-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `2.9.8`:** replace the whole `x4_ai_influence` folder, then **restart X4** and load your save (a DLL changed). The extension list shows **2.99**. Keep a backup of your save: this is a beta build.
+**Upgrading from `3.0.1`:** replace the whole `x4_ai_influence` folder, then restart X4 and load your save. The extension list shows **3.02**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,19 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.0.2-rc.1` — Where Things Stand, and Warships for Sale](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.2-rc.1) *(Nov 19, 2026)*
+**Eleven builds on top of 3.0.1 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** people are reminded where things stand now before they answer you (SOCIAL > MEMORY "Where things stand now"); outnumbered realms can buy warships too, and a real paid sale moved a destroyer and its price between two treasuries exactly once (ECONOMIC > WARSHIP TRADE "Who may seek warships"); councils are no longer offered moves the game would refuse; council warnings list both demands together; an expired OpenRouter key gives one message instead of silent retries.
+* **Fixed:** a gift's goodwill shows its fade and its lasting part (INFLUENCE > THE PEOPLE); CORPS discards saved self-recommendations; no false "link failing" warning on an empty reply; trade is never OVERDUE while its councils are OFF; a stale trade reply can no longer sign terms.
+* Full notes: [the release page](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.2-rc.1).
+
+### 📦 [`v3.0.1-rc.1` — Governors You Can Appoint, and a Tested Model for Every Layer](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.1-rc.1) *(Nov 19, 2026)*
+Appoint a governor from the GOVERNMENT tab; tested results for every model layer except ORDERS; CORPS fixes. Full notes on the release page.
+
+### 📦 [`v3.0.0-rc.1` — The Right Model for Each Job](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.0-rc.1) *(Nov 18, 2026)*
+A model per layer with tested picks. Full notes on the release page.
 
 ### 📦 [`v2.9.9-rc.1` — Pick Your Own Models](https://github.com/KennyG1990/AiLive/releases/tag/v2.9.9-rc.1) *(Nov 18, 2026)*
 **Twelve builds on top of 2.9.8 RC1.** **A beta: expect bugs.**
