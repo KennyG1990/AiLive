@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.0.2-rc.1` — *Where Things Stand, and Warships for Sale*
+## 🚀 Latest Release: `v3.0.3-rc.1` — *No More Career Grind, and Ships That Fight on Their Orders*
 
-> 📥 **[Download `x4_AiLive-3.0.2.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.2-rc.1)**
+> 📥 **[Download `x4_AiLive-3.0.3.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.3-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.0.1`:** replace the whole `x4_ai_influence` folder, then restart X4 and load your save. The extension list shows **3.02**. Keep a backup of your save: this is a beta build.
+**Upgrading from `3.0.2`:** replace the whole `x4_ai_influence` folder, then restart X4 and load your save. The extension list shows **3.03**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,15 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.0.3-rc.1` — No More Career Grind, and Ships That Fight on Their Orders](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.3-rc.1) *(Nov 19, 2026)*
+**Ten builds on top of 3.0.2 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** switch off the career grind and keep the chain of command (MILITARY > CAREERS "Career requirements"); ships engage raiders in reach on their standing orders instead of waiting for the model (MILITARY > ORDERS "When raiders come in range"); combat reports say when the target left; allied trade pacts run from council vote to fulfilled delivery; crisis supply contracts get posted; a repeated delegation gives one conflict report instead of a flood.
+* **Fixed (tests):** a station manager can no longer call a broken supply contract active.
+* **Built, waiting:** withdrawal playbooks (MILITARY > ORDERS "How operations advance"), and several witnesses carried from 3.0.2.
+* **Known:** officers see only the first 24 sectors you know (fix in progress); "order your ships to follow you" can move the captain instead of her wing.
+* Full notes: [the release page](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.3-rc.1).
 
 ### 📦 [`v3.0.2-rc.1` — Where Things Stand, and Warships for Sale](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.2-rc.1) *(Nov 19, 2026)*
 **Eleven builds on top of 3.0.1 RC1.** **A beta: expect bugs.**
