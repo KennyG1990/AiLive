@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.0.3-rc.1` — *No More Career Grind, and Ships That Fight on Their Orders*
+## 🚀 Latest Release: `v3.0.4-rc.1` — *Characters With a Life of Their Own, and Settings You Can Find*
 
-> 📥 **[Download `x4_AiLive-3.0.3.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.3-rc.1)**
+> 📥 **[Download `x4_AiLive-3.0.4.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.4-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.0.2`:** replace the whole `x4_ai_influence` folder, then restart X4 and load your save. The extension list shows **3.03**. Keep a backup of your save: this is a beta build.
+**Upgrading from `3.0.3`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.04**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,14 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.0.4-rc.1` — Characters With a Life of Their Own, and Settings You Can Find](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.4-rc.1) *(Nov 22, 2026)*
+**Twenty builds on top of 3.0.3 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** characters write down their own life the first time you talk to them and answer from it (SOCIAL > CONVERSATION "Characters' life stories"); a search box and starter presets (SIMPLE / STANDARD / FULL MILITARY) in SETTINGS; the hub shows what your OpenRouter replies cost; outgunned ships pull back; an empty answer is asked again; a refused satellite order stays refused.
+* **Fixed (checked by tests):** "cut short" on a good answer that came wrapped in an extra layer; officers know every charted sector; "Career requirements" OFF keeps the command limits.
+* **Built, waiting to be seen:** routine order results folded into the SITREP; rescue our people (AUTOMATIC / ASK ME / OFF); SAVE KEY checks your OpenRouter key; FLEET > OPERATION; and more in the release notes.
+* **Known:** long-serving officers' life stories can't be saved yet (records full; fix next); characters can still agree to things the mod can't do (fix next); "follow you" is refused honestly instead of carried out.
 
 ### 📦 [`v3.0.3-rc.1` — No More Career Grind, and Ships That Fight on Their Orders](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.3-rc.1) *(Nov 19, 2026)*
 **Ten builds on top of 3.0.2 RC1.** **A beta: expect bugs.**
