@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.0.5-rc.1` — *Governors Who Know Their Limits, and Every Button Answers*
+## 🚀 Latest Release: `v3.0.6-rc.1` — *Orders You Can Send, and an Inbox That Keeps Them*
 
-> 📥 **[Download `x4_AiLive-3.0.5.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.5-rc.1)**
+> 📥 **[Download `x4_AiLive-3.0.6.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.6-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.0.4`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.05**. Keep a backup of your save: this is a beta build.
+**Upgrading from `3.0.5`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.06**. Keep a backup of your save.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,13 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.0.6-rc.1` — Orders You Can Send, and an Inbox That Keeps Them](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.6-rc.1) *(Nov 23, 2026)*
+**Thirteen builds on top of 3.0.5 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** send a written operation order straight to an officer from DOCTRINE > OPERATION ORDER (MILITARY > DOCTRINE "Operation order SEND": INTO THE CHAT / SENDS AT ONCE); the AiLive INBOX tab - reports sorted into NEEDS YOU / LOSSES / CONTACTS / REPORTS / RECORDS, read, delete, show on map, kept across saves (OTHER > COMMS "AiLive reports go to"); negotiation table: name your freighter after accepting terms, lists that scroll, prices with cents; consulted officers call you back with the answer; newscasts publish reliably; garbled replies never show raw
+* **Built, waiting to be seen:** the strict hourly allowance reserves what it sends; shorter changes-only plan reviews; order priority keeps untracked orders visible
+* **Known:** an officer can say one thing while his ship does another (root fix in progress - trust the receipt line); an officer can say a consultation has not been answered yet when it has; INBOX HAIL is greyed on consolidated SITREPs.
 
 ### 📦 [`v3.0.5-rc.1` — Governors Who Know Their Limits, and Every Button Answers](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.5-rc.1) *(Nov 23, 2026)*
 **Ten builds on top of 3.0.4 RC1.** **A beta: expect bugs.**
