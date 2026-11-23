@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.0.4-rc.1` — *Characters With a Life of Their Own, and Settings You Can Find*
+## 🚀 Latest Release: `v3.0.5-rc.1` — *Governors Who Know Their Limits, and Every Button Answers*
 
-> 📥 **[Download `x4_AiLive-3.0.4.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.4-rc.1)**
+> 📥 **[Download `x4_AiLive-3.0.5.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.5-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.0.3`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.04**. Keep a backup of your save: this is a beta build.
+**Upgrading from `3.0.4`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.05**. Keep a backup of your save: this is a beta build.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,13 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.0.5-rc.1` — Governors Who Know Their Limits, and Every Button Answers](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.5-rc.1) *(Nov 23, 2026)*
+**Ten builds on top of 3.0.4 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** governors say when a request is beyond them (warships go to military command; no promised cargo drones); every attempt button beside the chat box answers (GitHub #143); newscasts every half hour (SOCIAL > THE PRESS "Galaxy newscast every": 15 / 30 / 60 MIN); long-serving officers get life stories; "hold for thirty seconds" means seconds; holds are acknowledged only once the ship takes them; your own people are never offered a bribe.
+* **Built, waiting to be seen:** plan reviews brief with changes only (MILITARY > ORDERS); scouts report only what their radar sees; commanders' stand-downs; lent ships returning to their fleet; the billet requirement; governors' requests kept; a failing per-layer model falls back to the default and shows as FAILING; radio promises need a sent message; formation counts in consultations; newscast loss counts; clearer SA briefings and war-supply news.
+* **Known:** a governor caught promising drones loses his honest warship answer too; a direct order to a captain can read as unconfirmed in his commander's plan review. Fixes in progress.
 
 ### 📦 [`v3.0.4-rc.1` — Characters With a Life of Their Own, and Settings You Can Find](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.4-rc.1) *(Nov 22, 2026)*
 **Twenty builds on top of 3.0.3 RC1.** **A beta: expect bugs.**
