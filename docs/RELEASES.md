@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.0.8-rc.1` — *Know Your Rival*
+## 🚀 Latest Release: `v3.0.9-rc.1` — *A Simpler Way In*
 
-> 📥 **[Download `x4_AiLive-3.0.8.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.8-rc.1)**
+> 📥 **[Download `x4_AiLive-3.0.9.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.9-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.0.7`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.08**. Keep a backup of your save.
+**Upgrading from `3.0.8`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.09**. Keep a backup of your save.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,13 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.0.9-rc.1` — A Simpler Way In](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.9-rc.1) *(Nov 25, 2026)*
+**Eleven builds on top of 3.0.8 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** a Simplified interface beside Classic (OTHER > INTERFACE "Interface": CLASSIC / SIMPLIFIED) - TODAY shows what needs you, what was reported since you last looked, your situation and who to talk to; talking in Simplified shows the person, their post and their mood, with the attempt buttons folded; relations read on the game's own scale; rival spies steal real secrets; the other side at the table knows its real treasury; type a sum at the table; station-for-ware deals; a courier's reply in the carrier's voice; a repeated consult sends a fresh question; storylines name realms as the game does; court "last dealt with" in plain time; a settings row whose master switch is OFF says so.
+* **Built, waiting to be seen:** realms bargain over trade (ECONOMIC > MARKETS); politics news once a day; warship-sale prices with separators and "a reported" when unconfirmed; civilian pilots as officers, NCOs or crew (MILITARY > PROMOTIONS, default unchanged).
+* **Known:** CIVILIAN CREW does not yet reach the comm window (leave OFFICERS); in Simplified the fold label is cut off and the odds show while folded; comm END sometimes ignores a click right after a reply
 
 ### 📦 [`v3.0.8-rc.1` — Know Your Rival](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.8-rc.1) *(Nov 25, 2026)*
 **Twelve builds on top of 3.0.7 RC1.** **A beta: expect bugs.**
