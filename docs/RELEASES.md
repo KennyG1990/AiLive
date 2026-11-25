@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.0.7-rc.1` — *Officers Who Do What They Say*
+## 🚀 Latest Release: `v3.0.8-rc.1` — *Know Your Rival*
 
-> 📥 **[Download `x4_AiLive-3.0.7.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.7-rc.1)**
+> 📥 **[Download `x4_AiLive-3.0.8.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.8-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.0.6`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.07**. Keep a backup of your save.
+**Upgrading from `3.0.7`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.08**. Keep a backup of your save.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,13 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.0.8-rc.1` — Know Your Rival](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.8-rc.1) *(Nov 25, 2026)*
+**Twelve builds on top of 3.0.7 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** THEIR DOCTRINE - rival realms' tenets and changes when you have the intel (POLITICAL > COUNCILS "Rival doctrine visible": WITH INTEL / ALWAYS); a fence on an unknown place warns you; a fairer negotiation table (RESTORE THEIR TERMS, a lost answer costs no round, argument costs written down, the deal's real price cap, ECONOMIC > NEGOTIATION "Credit steps at the table": 10K / 100K / 1M); walking away returns you to the conversation; negotiations use your LEADERS model; officers say truly where their ship is; letters carried by ship report the answer as pending until it is back; destructive switches take two presses; DOSSIER is ready at once after a UI reload.
+* **Built, waiting to be seen:** completed supply contracts grade idle hours fairly; plan reviews stop repeating on an unchanged conflict; a courier's answer survives one garbled reply; doctrine-cut plan steps on the officer's record; NEGOTIATE greyed when nobody can sign; a relayed radio answer names whose words it is; "Patrol here" after a gate goes to the new sector.
+* **Known:** asking an officer to consult her superior again can return the earlier answer to a different question; comm END sometimes ignores a click right after a reply
 
 ### 📦 [`v3.0.7-rc.1` — Officers Who Do What They Say](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.7-rc.1) *(Nov 25, 2026)*
 **Seventeen builds on top of 3.0.6 RC1.** **A beta: expect bugs.**
