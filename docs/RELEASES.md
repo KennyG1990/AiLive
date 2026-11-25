@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.0.6-rc.1` — *Orders You Can Send, and an Inbox That Keeps Them*
+## 🚀 Latest Release: `v3.0.7-rc.1` — *Officers Who Do What They Say*
 
-> 📥 **[Download `x4_AiLive-3.0.6.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.6-rc.1)**
+> 📥 **[Download `x4_AiLive-3.0.7.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.7-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.0.5`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.06**. Keep a backup of your save.
+**Upgrading from `3.0.6`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.07**. Keep a backup of your save.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,13 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.0.7-rc.1` — Officers Who Do What They Say](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.7-rc.1) *(Nov 25, 2026)*
+**Seventeen builds on top of 3.0.6 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** officers do what they say: on Player2 and OpenRouter a separate step reads your order and the receipt checks it against what the officer said (OTHER > CONNECTION "How orders are written": AUTO / IN THE SAME REPLY); consulted officers remember their superior's answer; governors really file military requests (MILITARY > SUPPORT "Requests to your commanders"; OFF sends them to you in the governor's words); INBOX HAIL works on fleet SITREPs; withheld order steps are remembered; written operation orders show their length; lighter background load
+* **Built, waiting to be seen:** hide civilian pilots from promotion lists (MILITARY > PROMOTIONS "Civilian pilots in promotion lists": SHOWN / HIDDEN); rescue after a loss call; adrift pilots never story speakers; AI agents stop re-filing old intel; supplier talks survive a long wait; OFF switches stop their scans; negotiation rounds and hull clauses; doctrine and envoy fixes; re-withdraw under fire
+* **Known:** on Player2 a slow order step is skipped after 8 seconds; several items are rare events not yet seen in play
 
 ### 📦 [`v3.0.6-rc.1` — Orders You Can Send, and an Inbox That Keeps Them](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.6-rc.1) *(Nov 23, 2026)*
 **Thirteen builds on top of 3.0.5 RC1.** **A beta: expect bugs.**
