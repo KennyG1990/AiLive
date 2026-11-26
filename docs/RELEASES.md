@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.0.9-rc.1` — *A Simpler Way In*
+## 🚀 Latest Release: `v3.1.0-rc.1` — *Peace Has a Price*
 
-> 📥 **[Download `x4_AiLive-3.0.9.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.9-rc.1)**
+> 📥 **[Download `x4_AiLive-3.1.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.1.0-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.0.8`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.09**. Keep a backup of your save.
+**Upgrading from `3.0.9`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.10**. Keep a backup of your save.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,14 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.1.0-rc.1` — Peace Has a Price](https://github.com/KennyG1990/AiLive/releases/tag/v3.1.0-rc.1) *(Nov 26, 2026)*
+**Builds 861-869 on top of 3.0.9 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** buy your way out of a war - offer peace with reparations, a council may name its price, you pay in conversation and the war ends (POLITICAL > DIPLOMACY "Councils may ask you for reparations"); a welcome walkthrough for new saves (how busy the galaxy is and what it costs, how deep command goes, Simplified or Classic); the Simplified interface complete - REALMS, PEOPLE, FLEET and SETTINGS, with counts on the tabs; break-off lines you set are obeyed exactly, and OUR DOCTRINE shows them as STANDING ORDERS; governors' SHIP ORDERS and THE LOG on GOVERNMENT, with ECONOMIC > GOVERNORS "Governors order warships".
+* **Built, waiting to be seen:** a ceasefire follows peace with you (POLITICAL > DIPLOMACY); a governor proposing a warship at a yard in his space; supply contracts with an advance (ECONOMIC > CONTRACTS); a set break-off line obeyed in a real fight.
+* **Fixed:** the Simplified fold label and the odds while folded; telling an envoy you will pay agreed reparations is no longer read as a lie.
+* **Known:** comm END sometimes ignores a click right after a reply
 
 ### 📦 [`v3.0.9-rc.1` — A Simpler Way In](https://github.com/KennyG1990/AiLive/releases/tag/v3.0.9-rc.1) *(Nov 25, 2026)*
 **Eleven builds on top of 3.0.8 RC1.** **A beta: expect bugs.**
