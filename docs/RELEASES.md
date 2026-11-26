@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.1.0-rc.1` — *Peace Has a Price*
+## 🚀 Latest Release: `v3.2.0-rc.1` — *Governors at Work, Civilians at Peace*
 
-> 📥 **[Download `x4_AiLive-3.1.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.1.0-rc.1)**
+> 📥 **[Download `x4_AiLive-3.2.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.2.0-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.0.9`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.10**. Keep a backup of your save.
+**Upgrading from `3.1.0`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.20**. Keep a backup of your save.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,14 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.2.0-rc.1` — Governors at Work, Civilians at Peace](https://github.com/KennyG1990/AiLive/releases/tag/v3.2.0-rc.1) *(Nov 26, 2026)*
+**Builds 870-880 on top of 3.1.0 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** civilian ships are civilians - miners, traders and builders fly for you outside the navy (no rank, post, medals, school or eulogies), follow the commander of a fleet you put them in, and join the navy only by taking a commission (MILITARY > PROMOTIONS "Civilian pilots serve as", CIVILIAN CREW now the default); your governor fits cargo drones to his stations at your word, or on his own within ten a review (ECONOMIC > GOVERNORS "Governors fit station drones"); the peace between you and a realm on its DOSSIER; an order to your own governor rolls no dice.
+* **Built, waiting to be seen:** your governor seats a captain from a ship's own crew (ECONOMIC > GOVERNORS "Governors seat captains"); ordered cargo drones arriving; a supply contract paid in advance by a realm on good terms with you.
+* **Fixed:** the CORPS roster with civilian pilots; a governor's drone order raised twice; the station a governor picks for drones.
+* **Known:** comm END sometimes ignores a click right after a reply
 
 ### 📦 [`v3.1.0-rc.1` — Peace Has a Price](https://github.com/KennyG1990/AiLive/releases/tag/v3.1.0-rc.1) *(Nov 26, 2026)*
 **Builds 861-869 on top of 3.0.9 RC1.** **A beta: expect bugs.**
