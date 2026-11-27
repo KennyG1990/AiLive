@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.2.0-rc.1` — *Governors at Work, Civilians at Peace*
+## 🚀 Latest Release: `v3.3.0-rc.1` — *By Their Own Word*
 
-> 📥 **[Download `x4_AiLive-3.2.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.2.0-rc.1)**
+> 📥 **[Download `x4_AiLive-3.3.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.3.0-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.1.0`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.20**. Keep a backup of your save.
+**Upgrading from `3.2.0`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.30**. Keep a backup of your save.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,14 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.3.0-rc.1` — By Their Own Word](https://github.com/KennyG1990/AiLive/releases/tag/v3.3.0-rc.1) *(Nov 27, 2026)*
+**Builds 881-893 on top of 3.2.0 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** offer a civilian pilot a commission in conversation and their own answer decides it; civilians are no longer briefed like serving officers; WHAT'S NEW in SETTINGS - each release in plain words, the version you run, CHECK FOR UPDATES and a JOIN THE DISCORD button; a cleaner hub header; Simplified FLEET folds idle ships, TODAY shows what your fleet is doing and nearby enemies, PEOPLE shows loyalty and character with GIVE AN ORDER.
+* **Built, waiting to be seen:** allies who come to your defence (POLITICAL > DIPLOMACY "Allied defence"); governors seat captains on their own (ECONOMIC > GOVERNORS); warships sold with promises; starving equipment docks post supply contracts and managers may call you; partly kept supply contracts graded fairly; a newer release previewed on WHAT'S NEW.
+* **Fixed:** an accepted commission recorded at once, even right after a load; the settings search while WHAT'S NEW is open.
+* **Known:** comm END sometimes ignores a click right after a reply - hold the click, or click the text box first
 
 ### 📦 [`v3.2.0-rc.1` — Governors at Work, Civilians at Peace](https://github.com/KennyG1990/AiLive/releases/tag/v3.2.0-rc.1) *(Nov 26, 2026)*
 **Builds 870-880 on top of 3.1.0 RC1.** **A beta: expect bugs.**
