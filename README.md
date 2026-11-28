@@ -157,7 +157,7 @@ AiLive is built on one ironclad rule: **No Magic. No Cheating.**
 | Section | What You'll Find Inside |
 | :--- | :--- |
 | 🚀 **[Download Latest Release](https://github.com/KennyG1990/AiLive/releases)** | Grab the ready-to-install `x4_AiLive` zip archive from GitHub Releases. |
-| 📦 **[Releases & Changelog](docs/RELEASES.md)** | Version-by-version release history (`v3.0.8 RC1` down to `v2.0.1`), upgrade notes, and save-safety fixes. |
+| 📦 **[Releases & Changelog](docs/RELEASES.md)** | Version-by-version release history (`v3.4.0 RC1` down to `v2.0.1`), upgrade notes, and save-safety fixes. |
 | 📖 **[Player Guide](docs/PLAYER-GUIDE.md)** | 2-minute installation, Player2 setup, and a hands-on guide to your first 15 minutes in game. |
 | 📚 **[Read Docs (Field Manual)](docs/READ-DOCS.md)** | Chat commands (`whereis`, `range`, `/raw`), Hub tabs, the 7 Naval Ranks, and all 22+ Honours & Ribbons. |
 | 🛠️ **[Under the Hood](docs/UNDER-THE-HOOD.md)** | How AiLive works inside X4: deterministic guardrails, person-level secret ledgers, AARs, and 90+ automated test gates. |
