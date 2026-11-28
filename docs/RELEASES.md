@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.4.0-rc.1` — *Operations in Motion*
+## 🚀 Latest Release: `v3.4.1-rc.1` — *Know the Ground*
 
-> 📥 **[Download `x4_AiLive-3.4.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.4.0-rc.1)**
+> 📥 **[Download `x4_AiLive-3.4.1.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.4.1-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.3.0`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.40**. Keep a backup of your save.
+**Upgrading from `3.4.0`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.41**. Keep a backup of your save.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,14 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.4.1-rc.1` — Know the Ground](https://github.com/KennyG1990/AiLive/releases/tag/v3.4.1-rc.1) *(Nov 28, 2026)*
+**Builds 912-922 on top of 3.4.0 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** DOSSIER > THEIR SPACE lists the sectors you know of a realm as critical, contested, border or core, and every realm's councils, governors and admirals weigh the same map; "all three escort my ship" after a patrol now includes the patrol ship; a new order in mid-operation cancels the old operation's waiting steps.
+* **Built, waiting to be seen:** war ledgers tally each side's losses for councils, situation reports and weekly news (runs with POLITICAL > COUNCILS); a time limit in a chained order stays with its own step.
+* **Fixed:** an operation confirmed in a second message now waits step by step.
+* **Known:** "all three" as a fresh order can miss a ship outside the admiral's wing; a cut-off reply can promise an order that never went out; a return step named by a short sector name can start early; comm END sometimes ignores a click right after a reply
 
 ### 📦 [`v3.4.0-rc.1` — Operations in Motion](https://github.com/KennyG1990/AiLive/releases/tag/v3.4.0-rc.1) *(Nov 28, 2026)*
 **Builds 894-912 on top of 3.3.0 RC1.** **A beta: expect bugs.**
