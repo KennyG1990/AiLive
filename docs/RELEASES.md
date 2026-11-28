@@ -10,12 +10,12 @@
 
 ---
 
-## 🚀 Latest Release: `v3.3.0-rc.1` — *By Their Own Word*
+## 🚀 Latest Release: `v3.4.0-rc.1` — *Operations in Motion*
 
-> 📥 **[Download `x4_AiLive-3.3.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.3.0-rc.1)**
+> 📥 **[Download `x4_AiLive-3.4.0.zip` on GitHub Releases](https://github.com/KennyG1990/AiLive/releases/tag/v3.4.0-rc.1)**
 > *(Always download the **`x4_AiLive-*.zip`** package under **Assets**—do not download GitHub's automatic "Source code" zip!)*
 
-**Upgrading from `3.2.0`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.30**. Keep a backup of your save.
+**Upgrading from `3.3.0`:** replace the whole `x4_ai_influence` folder, make sure X4's **Protected UI Mode** is off, then restart X4 and load your save. The extension list shows **3.40**. Keep a backup of your save.
 
 ### ⚠️ Still important if you skipped `2.4.0`: the save-safety fix
 Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI model emitted multibyte typographic characters that were split in half during string truncation. **`v2.4.0-rc.1` and later sanitize every text string before it reaches the save.**
@@ -23,6 +23,14 @@ Builds **`2.3.0` and earlier** could corrupt AiLive's saved memory if the AI mod
 ---
 
 ## 🗓️ Release Timeline & What's Inside Each Build
+
+### 📦 [`v3.4.0-rc.1` — Operations in Motion](https://github.com/KennyG1990/AiLive/releases/tag/v3.4.0-rc.1) *(Nov 28, 2026)*
+**Builds 894-912 on top of 3.3.0 RC1.** **A beta: expect bugs.**
+
+* **New (seen in game):** give an admiral a whole operation in one message - scout, then patrol, then escort - and each step waits for the one before it to really end; FLEET > OPERATION shows every phase as it happens (MILITARY > ORDERS "A chained order"); timed patrols end on time even when the ship fights; scouts sent into an uncharted sector are refused honestly before anything is ordered; a pilot seated in your chain of command acts as an officer; `/swapcaptains` exchanges two captains by shuttle; an enlisted pilot's refusal names the setting that lets them command; typed text in a conversation stays put.
+* **Built, waiting to be seen:** construction sites remember the materials you sold them (ECONOMIC > CONTRACTS "Construction supply deliveries"); faction talks stay inside their councils' decisions; a droneless capital ship is told it cannot buy at a droneless station; councils stop offering deals to realms that cannot answer.
+* **Fixed:** an escort ordered to "the Commander" guards your ship; the captain swap reads the real helms.
+* **Known:** an operation confirmed in a second message runs all at once (give it in one message for now); comm END sometimes ignores a click right after a reply
 
 ### 📦 [`v3.3.0-rc.1` — By Their Own Word](https://github.com/KennyG1990/AiLive/releases/tag/v3.3.0-rc.1) *(Nov 27, 2026)*
 **Builds 881-893 on top of 3.2.0 RC1.** **A beta: expect bugs.**
